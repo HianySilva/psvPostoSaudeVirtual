@@ -7,8 +7,14 @@ import cadastroUsuarioMais from '../components/cadastroUsuarioMais.vue'
 import homePage from '../components/home.vue'
 import funcionalidadesPage from '../components/funcionalidades.vue'
 import agendarConsulta from '../components/agendarConsulta.vue'
+import agPasso2 from '../components/agPasso2.vue'
 
 const routes = [
+  {
+    path: '/',
+    name: 'homePage',
+    component: homePage
+  },
   {
     path: '/loginPage',
     name: 'loginPage',
@@ -30,11 +36,6 @@ const routes = [
     component: cadastroUsuarioMais
   },
   {
-    path: '/',
-    name: 'homePage',
-    component: homePage
-  },
-  {
     path: '/funcionalidadesPage',
     name: 'funcionalidadesPage',
     component: funcionalidadesPage
@@ -43,6 +44,11 @@ const routes = [
     path: '/agendarConsulta',
     name: 'agendarConsulta',
     component: agendarConsulta
+  },
+  {
+    path: '/agPasso2',
+    name: 'agPasso2',
+    component: agPasso2
   }  
 ]
 

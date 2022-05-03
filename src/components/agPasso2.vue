@@ -101,139 +101,57 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link disabled" aria-current="page" href="#" id="second-menu"><strong>Passo 1</strong></a>
+                <a class="nav-link active" aria-current="page" href="agendarConsulta" id="second-menu"><strong>Passo 1</strong></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-current="page" href="#" id="seta"><i class="fa-solid fa-chevron-right"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="agPasso2" id="second-menu"><strong>Passo 2</strong></a>
+                <a class="nav-link disabled" aria-current="page" href="#" id="second-menu"><strong>Passo 2</strong></a>
               </li>
             </ul>  
           </div>  
         </div>  
       </nav>  
     </div>
-    <div class="row">
-        <div class="col-6">
-            <div class="atendente">
-                <header class="header-atendente">
-                    <img class="atendente-img" src="../assets/atendente.png">
-                    <span><strong id="atendente-voice">Atenção: Necessita de consulta domiciliar?<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
-                    <form id="dados">
-                        <input type="radio" name="pergunta" id="pergunta-sim" value="sim">
-                        <label for="pergunta-sim"><strong class="resposta">Sim</strong></label>
-                        <input type="radio" name="pergunta" id="pergunta-nao" value="não">
-                        <label for="pergunta-nao"><strong class="resposta">Não</strong></label>
-                    </form>
-                </header>
-            </div>
-            <div class="atendente">
-                <header class="header-atendente-second">
-                    <img class="atendente-img" src="../assets/atendente.png">
-                    <span><strong id="atendente-voice">Escolha a melhor data para você agendar sua consulta?<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
-                </header>    
-            </div>
-            <div class="body-dados">
-                <form action="#" class="dados">
-                    <div class="row">
-                        <div class="col-6">
-                            <input type="checkbox" name="consulta1" id="consulta1" value="Consulta Médica">
-                            <label for="consulta1">Consulta Médica</label>
-                        </div>
-                        <div class="col-6">
-                            <input type="checkbox" name="consulta2" id="consulta2" value="Consulta ao Dentista">
-                            <label for="consulta1">Consulta ao Dentista</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <input type="checkbox" name="consulta3" id="consulta3" value="Atendimento Virtual">
-                            <label for="consulta3">Atendimento Virtual</label>
-                        </div>
-                        <div class="col-6">
-                            <input type="checkbox" name="consulta4" id="consulta4" value="Atendimento a Domicílio">
-                            <label for="consulta4">Atendimento a Domicílio</label>
-                        </div>
-                    </div>
-                </form>    
-            </div>
-            <div class="body-dados-second">
-                <div class="row">
-                    <div class="col-6">
-                        <form action="#" class="dados-second">
-                            <div class="row">
-                                <div class="col-12">
-                                    <i class="fa-solid fa-clock"></i>Manhã
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label class="horas">8:20</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="horas">9:20</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="horas">10:20</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <label class="horas">08:40</label>
-                                        </div>
-                                        <div class="col-4">
-                                            <label class="horas">09:40</label>
-                                        </div>
-                                        <div class="col-4">
-                                            <label class="horas">10:40</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>    
-                    </div>
-                    <div class="col-6">
-                        <form action="#" class="dados-second">
-                            <div class="row">
-                                <div class="col-12">
-                                    <i class="fa-solid fa-clock"></i>Tarde
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label class="horas">14:00</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="horas">15:00</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="horas">16:00</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <label class="horas">14:40</label>
-                                        </div>
-                                        <div class="col-4">
-                                            <label class="horas">15:40</label>
-                                        </div>
-                                        <div class="col-4">
-                                            <label class="horas">16:40</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label class="horas">17:00</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>    
-                    </div>
-                </div>    
-            </div>
-        </div>
-        <div class="col-6">
-
-        </div>
+    <div class="atendente">
+        <header class="header-atendente">
+            <img class="atendente-img" src="../assets/atendente.png">
+            <span><strong id="atendente-voice">Preenchar os dados a seguir para concluir o seu agendamento de consulta<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </header>
     </div>
+    <div class="botao">
+        <button type="button" class="btn" id="mensagem">Sicronize suas informações do SUS no nosso site<i class="fa-solid fa-arrows-spin" id="spinner"></i></button>
+    </div>
+    <div id="body-cadastro">
+        <form class="card">
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="posto">Postos</label>
+                    <input type="text" id="posto" autocomplete="off" v-model="Postos">
+                </div>
+                <div class="card-content-area">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" autocomplete="off" v-model="Data">
+                </div>
+                <div class="card-content-area">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" autocomplete="off" v-model="Hora">
+                    <span v-show="deuErro1" class="erro-senha"
+                    ><i class="fa fa-times"></i>Nenhum dado cadastrado ou Dados
+                    incopletos</span
+                    >
+                    <span v-show="deuErro" class="erro-senha"
+                    ><i class="fa fa-times"></i>As senhas digitadas não conferem</span
+                    >
+                </div>
+            </div>    
+        </form>
+        <div class="botao">
+            <button v-on:click="Confirmar()" type="button" class="btn" id="confirmar">Confirmar</button>
+        </div>
+    </div>    
+
     <div class="rodape">
       <footer class="rodape-footer">
         <div class="row">
@@ -264,10 +182,32 @@
 
 <script>
 export default {
-  name: 'agendarConsulta',
-  props: {
-    msg: String
-  }
+  name: "agPasso2",
+  data() {
+    return {
+      deuErro1: false,
+      deuErro: false,
+      Postos: "",
+      Data: "",
+      Hora: "",
+    };
+  },
+  methods: {
+    Confirmar() {
+      if (
+        this.Postos == "" ||
+        this.Postos == " " ||
+        this.Postos < 3
+      ) {
+        this.deuErro1 = true;
+        this.Postos = "";
+        this.Data = "";
+        this.Hora = "";
+      } else {
+          this.$router.push("agendarConsulta");
+        }
+    },
+  },
 }
 </script>
 
@@ -341,57 +281,6 @@ input {
 #sound {
   margin: 0.5em;
 }
-#dados {
-    background-color: #051775;
-    height: 10vh;
-    width: 28vw;
-    margin-left: 10%;
-}
-#pergunta-sim {
-    margin-top: 4%;
-    margin-left: -30%;
-    margin-right: -50%;
-}
-#pergunta-nao {
-    margin-top: 4%;
-    margin-left: -30%;
-    margin-right: -50%;
-}
-.resposta {
-    color: #ffffff;
-    font-size: 15pt;
-}
-.header-atendente-second {
-    margin-top: 3%;
-    margin-left: 16%;
-}
-.dados {
-    width: 100%;
-    margin-top: 2%;
-    margin-left: 16%;
-    background-color: #051775;
-    color: #ffffff;
-    text-align: center;
-    font-size: 15pt;
-    height: 25vh;
-    padding-top: 3%;
-    border-radius: 20px 20px 20px 20px;
-}
-.dados-second {
-    width: 100%;
-    margin-top: 3%;
-    margin-left: 35%;
-    background-color: #051775;
-    color: #ffffff;
-    text-align: center;
-    font-size: 15pt;
-    height: 27vh;
-    padding-top: 3%;
-    border-radius: 20px 20px 20px 20px;
-}
-.horas {
-    padding-top: 1em;
-}
 .rodape {
   background-color: #051775;
   margin-top: 0.5em;
@@ -405,5 +294,46 @@ input {
 }
 #twitter {
   margin-right: 15%;
+}
+#mensagem {
+    background-color: #66C4F9;
+    color: #ffffff;
+    margin-left: 69%;
+}
+#spinner {
+    margin: 0.5em;
+}
+.card {
+  background-color: #051775;
+  margin: 0.5em;
+  margin-left: 25%;
+  padding: 5%;
+  border-radius: 20px 20px 20px 20px;
+  width: 40vw;
+  height: 60vh;
+}
+.card-content label {
+  color: #ffffff;
+  font-size: 18pt;
+  opacity: 0.8;
+}
+.card-content-area {
+  display: flex;
+  flex-direction: column;
+  padding:10px 0;
+}
+.card-content-area input {
+  margin-top: 10px;
+  padding:0 5px;
+  background-color: transparent;
+  border:none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  color: #ffffff;
+}
+#confirmar {
+    background-color: #66C4F9;
+    color: #ffffff;
+    margin-left: 93%;
 }
 </style>
