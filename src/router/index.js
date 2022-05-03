@@ -5,6 +5,7 @@ import cadastroPage from '../components/cadastroUsuario.vue'
 import cadastrarMedicos from '../components/cadastroMedico.vue'
 import cadastroUsuarioMais from '../components/cadastroUsuarioMais.vue'
 import homePage from '../components/home.vue'
+import funcionalidadesPage from '../components/funcionalidades.vue'
 
 const routes = [
   {
@@ -28,9 +29,14 @@ const routes = [
     component: cadastroUsuarioMais
   },
   {
-    path: '/homePage',
+    path: '/',
     name: 'homePage',
     component: homePage
+  },
+  {
+    path: '/funcionalidadesPage',
+    name: 'funcionalidadesPage',
+    component: funcionalidadesPage
   }  
 ]
 
