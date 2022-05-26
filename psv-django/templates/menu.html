@@ -179,7 +179,7 @@
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_sair' %}" id="first-menu">Sair</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}" id="first-menu">Sair</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -194,7 +194,7 @@
                         Cadastrar
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" aria-current="page" href="{% url 'account_cadastrarUsuario' %}" id="cadastro">Cadastro de Usuário</a></li>
+                        <li><a class="dropdown-item" aria-current="page" href="{% url 'account_signup' %}" id="cadastro">Cadastro de Usuário</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Cadastro de Médico</a></li>
                         
