@@ -1,0 +1,41 @@
+{% extends 'menu.html' %}
++
+{% load crispy_forms_tags %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<div class="next-page">
+    <nav class="navbar navbar-expand-lg next-page">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link activate" aria-current="page" href="{% url 'pages:home' %}" id="second-menu"><strong>Início</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="#" id="seta"><i class="fa-solid fa-chevron-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="#" id="second-menu"><strong>Casdastro de Usuários</strong></a>
+            </li>
+          </ul>  
+        </div>  
+      </div>  
+    </nav>  
+</div>
+<div class="atendente">
+    <header class="header-atendente">
+        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png" alt="atendente" border="0" />
+      <span><strong id="atendente-voice">Cadastro neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+    </header>
+</div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
+    </form>
+{% endblock %}
