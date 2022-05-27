@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'pages.apps.PagesConfig',
+    'medico',
 ]
 
 MIDDLEWARE = [
