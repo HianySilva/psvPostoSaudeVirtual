@@ -6,3 +6,6 @@ class Medico (models.Model):
     turno = models.CharField(max_length=256)
     email = models.CharField(max_length=256)
     senha = models.CharField(max_length=256)
+
+    def __str__(self) -> str:
+        return self.nome_completo
