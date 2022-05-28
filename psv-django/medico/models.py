@@ -4,7 +4,7 @@ class Medico (models.Model):
     crm = models.CharField(max_length=256)
     especializacao = models.CharField(max_length=256)
     turno = models.CharField(max_length=256)
-    email = models.CharField(max_length=256)
+    email = models.EmailField(max_length=256)
     senha = models.CharField(max_length=256)
 
     def __str__(self) -> str:

@@ -3,5 +3,29 @@
 {% block title %}Loja Python{% endblock %}
 
 {% block content %}
-<a href="{% url 'medico.novo' %}"></a>
+<a href="{% url 'medico.novo' %}">Novo</a>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CRM</th>
+            <th>Especialização</th>
+            <th>Turno</th>
+            <th>Email</th>
+            <th>Senha</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for medico in object_list %}
+        <tr>
+            <td>{{ medico.nome_completo }}</td>
+            <td>{{ medico.crm }}</td>
+            <td>{{ medico.especialicao }}</td>
+            <td>{{ medico.turno }}</td>
+            <td>{{ medico.email }}</td>
+            <td>{{ medico.senha }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
