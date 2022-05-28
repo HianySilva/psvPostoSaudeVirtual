@@ -3,6 +3,19 @@
 {% block title %}Loja Python{% endblock %}
 
 {% block content %}
+<style>
+    .form-busca{
+        margin-top: 0.5em;
+    }
+    #botao-pesquisa{
+        color: #051775;
+    }
+</style>
+
+<form action="" method="get" class="form-busca">
+    <input type="text" name="nome" placeholder="Buscar por nome" id="busca">
+    <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
 <a href="{% url 'medico.novo' %}">Novo</a>
 <table>
     <thead>
@@ -13,6 +26,7 @@
             <th>Turno</th>
             <th>Email</th>
             <th>Senha</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +38,10 @@
             <td>{{ medico.turno }}</td>
             <td>{{ medico.email }}</td>
             <td>{{ medico.senha }}</td>
+            <td>
+                <a href="{% url 'medico.editar' medico.pk %}">Editar</a>
+                <a href="{% url 'medico.remover' medico.pk %}">Remover</a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>

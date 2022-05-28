@@ -1,0 +1,15 @@
+{% extends 'menu.html' %}
+
+{% block title %}Excluir{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="atendente-login">
+        <header class="header-atendente">
+            <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+            <span><strong id="atendente-voice">Você tem certeza que deseja Excluir "{{ object }}"?<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </header>
+    </div>
+    <button class="btn btn-danger" id="botao-cadastrar-logar-sair" type="submit">Excluir</button>
+</form>
+{% endblock %}
