@@ -110,11 +110,29 @@
           margin-left: 90%;
           width: 8vw;
         }
+        #botao-cadastrar-logar-sair-1{
+          background-color: #051775;
+          border-radius: 50px 50px 50px 50px;
+          margin: 0.5em;
+          margin-left: 87%;
+          width: 8vw;
+
+        }
         .atendente-login {
           margin-top: 20px;
         }
         #sair {
           color: #ffffff;
+        }
+        .funcionalidades{
+          position: absolute;
+          left: 65%;
+          top:50%;
+          background-color: #051775;
+          border-radius: 50px 50px 50px 50px;
+          font-size:160%;
+          color: white;
+          text-decoration: none;
         }
     </style>
     <title>Posto Saúde Virtual</title>
@@ -185,9 +203,7 @@
                     <li class="nav-item">
                       <a class="nav-link disabled" href="#" id="first-menu">Bem-vindo(a)</a>
                   </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'pages:funcionalidades' %}" id="first-menu">Todas as Funcionalidades</a>
-                    </li>
+                    
                     <li class="nav-item">
                       <a class="nav-link" href="{% url 'account_logout' %}" id="first-menu">Sair</a>
                   </li>
