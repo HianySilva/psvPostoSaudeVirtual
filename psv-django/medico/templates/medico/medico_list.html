@@ -1,14 +1,32 @@
 {% extends 'menu.html' %}
 
-{% block title %}Loja Python{% endblock %}
+{% block title %}Posto Saúde Virtual{% endblock %}
 
 {% block content %}
 <style>
     .form-busca{
-        margin-top: 0.5em;
+        margin-top: 1em;
     }
     #botao-pesquisa{
         color: #051775;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    table {
+        background-color: #051775;
+    }
+    thead {
+        color: #ffffff;
+    }
+    tbody {
+        color: #ffffff;
+    }
+    caption {
+        background-color: #051775;
+        color: #ffffff;
+        font-size: 15pt;
     }
 </style>
 
@@ -16,34 +34,37 @@
     <input type="text" name="nome" placeholder="Buscar por nome" id="busca">
     <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
-<a href="{% url 'medico.novo' %}">Novo</a>
-<table>
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>CRM</th>
-            <th>Especialização</th>
-            <th>Turno</th>
-            <th>Email</th>
-            <th>Senha</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for medico in object_list %}
-        <tr>
-            <td>{{ medico.nome_completo }}</td>
-            <td>{{ medico.crm }}</td>
-            <td>{{ medico.especialicao }}</td>
-            <td>{{ medico.turno }}</td>
-            <td>{{ medico.email }}</td>
-            <td>{{ medico.senha }}</td>
-            <td>
-                <a href="{% url 'medico.editar' medico.pk %}">Editar</a>
-                <a href="{% url 'medico.remover' medico.pk %}">Remover</a>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<button class="btn btn-danger" id="botao-cadastrar-logar-sair" type="submit"><a href="{% url 'medico.novo' %}">Novo</a></button>
+<div class="table-responsive">
+    <table class="table table-borderless caption-top table-sm">
+        <caption>Lista de Médicos</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CRM</th>
+                <th>Especialização</th>
+                <th>Turno</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medico in object_list %}
+            <tr>
+                <td>{{ medico.nome_completo }}</td>
+                <td>{{ medico.crm }}</td>
+                <td>{{ medico.especializacao }}</td>
+                <td>{{ medico.turno }}</td>
+                <td>{{ medico.email }}</td>
+                <td>{{ medico.senha }}</td>
+                <td>
+                    <a href="{% url 'medico.editar' medico.pk %}">Editar</a>
+                    <a href="{% url 'medico.remover' medico.pk %}">Remover</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>    
 {% endblock %}
