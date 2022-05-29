@@ -6,3 +6,6 @@ class HomePageView(TemplateView):
 
 class FuncionalidadesView(TemplateView):
     template_name = 'funcionalidades.html'
+
+class Consultar_agendarView(TemplateView):
+    template_name = 'Consultar_agendar.html'
