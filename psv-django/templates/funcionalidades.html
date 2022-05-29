@@ -1,0 +1,128 @@
+{% extends 'menu.html' %}
+
+{% block title %}Posto Saúde Virtual{% endblock %}
+
+{% block content %}
+<div class="next-page">
+    <nav class="navbar navbar-expand-lg next-page">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'pages:home' %}" id="second-menu"><strong>Ínicio</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-current="page" href="#" id="seta"><i class="fa-solid fa-chevron-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="#" id="second-menu"><strong>Todas as funcionalidades</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="#" id="seta"><i class="fa-solid fa-chevron-right"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="agendarConsulta" id="second-menu"><strong>Agendar consulta</strong></a>
+            </li>
+          </ul>  
+        </div>  
+      </div>  
+    </nav>  
+</div>
+<div class="corpo-img">
+    <img src="https://i.ibb.co/xsSPkvC/body-picture2.png" alt="body-picture2" id="body-picturef"> 
+</div>
+<div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/52Bp1jz/visualizar-Exames.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/4JBj079/atendimento-Virtual.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/jykmCXM/medicamentos-Disponiveis.png">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/XfBTnMQ/requisitar-Visitas-Domicilio.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/Vpj3Km9/localizacao.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/7CXNhbd/secao-Perguntas.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/JRDHh8k/chat-Online.png">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/9pbTPq0/fazer-Sicronizacao-Sus.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/tXt1dj9/gerar-Declaracao.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/N39Yznt/formularios-Online.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 8rem;">
+        <img src="https://i.ibb.co/gzpdb2L/visualizar-Agenda.png">
+      </div>
+    </div>
+</div>
+<div class="rodape">
+<footer class="rodape-footer">
+    <div class="row">
+        <div class="col-4">
+          <div class="contatos">
+            <h5>Contatos:</h5>
+            <h5><i class="fa-solid fa-envelope"></i>posto.saúdevirtual27palmares@gmail.com</h5>
+            <h5><i class="fa-solid fa-phone"></i>(81) 98349-6015</h5>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="contatos">
+            <h5>Conheça-nos</h5>
+            <h5><i class="fa-solid fa-location-dot"></i>Palmares, Cep: 55540-000</h5>
+        </div>
+    </div>
+        <div class="col-4">
+          <div class="contatos">
+            <h5>Redes Sociais:</h5>
+            <i class="fa-brands fa-instagram" id="instagram"></i><i class="fa-brands fa-twitter" id="twitter"></i><i class="fa-brands fa-facebook"></i>
+          </div>
+        </div>
+    </div>
+</footer>
+</div>
+{% endblock %}
