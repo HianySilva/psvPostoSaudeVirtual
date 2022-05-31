@@ -1,0 +1,68 @@
+{% extends 'menu.html' %}
+
+{% block title %}Posto Saúde Virtual{% endblock %}
+
+{% block content %}
+<style>
+    .form-busca{
+        margin-top: 1em;
+    }
+    #botao-pesquisa{
+        color: #051775;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    table {
+        background-color: #051775;
+    }
+    thead {
+        color: #ffffff;
+    }
+    tbody {
+        color: #ffffff;
+    }
+    caption {
+        background-color: #051775;
+        color: #ffffff;
+        font-size: 15pt;
+    }
+</style>
+
+<form action="" method="get" class="form-busca">
+    <input type="text" name="nome" placeholder="Buscar por nome" id="busca">
+    <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+<button class="btn btn-danger" id="botao-cadastrar-logar-sair-1" type="submit"><a href="{% url 'pessoa.novo' %}">Novo</a></button>
+<div class="table-responsive">
+    <table class="table table-borderless caption-top table-sm">
+        <caption>Lista de Agendamento de Consulta</caption>
+        <thead>
+            <tr>
+                <th>Nº Do Cartão Do SUS</th>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>Data De Nascimento</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pessoa in object_list %}
+            <tr>
+                <td>{{ pessoa.numero_cartao_sus }}</td>
+                <td>{{ pessoa.cpf }}</td>
+                <td>{{ pessoa.nome_completo }}</td>
+                <td>{{ pessoa.data|date:"d/m/y" }}</td>
+                <td>{{ pessoa.telefone }}</td>
+                <td>
+                    <a href="{% url 'pessoa.editar' pessoa.pk %}">Editar</a>
+                    <a href="{% url 'pessoa.remover' pessoa.pk %}">Remover</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>    
+{% endblock %}
