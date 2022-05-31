@@ -21,4 +21,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls', namespace='pages')),
     path('medicos/', include('medico.urls')),
+    path('agendarConsulta/', include('agendarConsulta.urls')),
 ]
