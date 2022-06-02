@@ -119,6 +119,13 @@
           width: 8vw;
 
         }
+        #entrar{
+          background-color: #051775;
+          border-radius: 50px 50px 50px 50px;
+          margin: 0.5em;
+          margin-left: 45%;
+          width: 300%;
+        }
         .atendente-login {
           margin-top: 20px;
         }
@@ -131,9 +138,16 @@
           top:50%;
           background-color: #051775;
           border-radius: 50px 50px 50px 50px;
-          font-size:160%;
+          font-size:130%;
           color: white;
           text-decoration: none;
+        }
+        .btn-outline-success{
+          border-color: white;
+        }
+        .btn-outline-success:hover{
+          background-color:#00008B;
+          border-color: white;
         }
     </style>
     <title>Posto Saúde Virtual</title>
@@ -216,15 +230,11 @@
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
 
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'account_signup' %}" id="first-menu">
                         Cadastrar
                       </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" aria-current="page" href="{% url 'account_signup' %}" id="cadastro">Cadastro de Usuário</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{% url 'medico.index' %}">Cadastro de Médico</a></li>
-                      </ul>
+                      
                     </li>
                     {% endif %}
                   </ul>    

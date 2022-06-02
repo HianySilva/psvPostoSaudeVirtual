@@ -26,13 +26,17 @@
         font-size: 13pt;
     }
 </style>
+<body>
 
-<div class="atendente-login">
-    <header class="header-atendente">
-        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
-      <span><strong id="atendente-voice">&nbsp; Logar neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
-    </header>
-</div>
+
+
+<div class="login">
+    <div class="atendente-login">
+        <header class="header-atendente">
+            <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+          <span><strong id="atendente-voice">&nbsp; Logar neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </header>
+    </div>
     <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
@@ -41,16 +45,53 @@
         
 
         <div class="row">
-            <div class="col-6">
-                <fieldset>
-                    <a href="{% url 'account_signup' %}"><h1>Cadastre-se</h1></a>
-                </fieldset>
-            </div>
-            <div class="col-6">
-                <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Entrar</button>
+
+            <div class="entra">
+                <button class="btn btn-success" id="entrar" type="submit">Entrar</button>
+                <button class="btn btn-success" id="senha" type="submit">Esqueceu sua senha? </button>
             </div>
         </div>
+        <div>
+            <h1>Não tem uma conta? <a class="cadastre-se" href="{% url 'account_signup' %}">Cadastre-se</a></h1>
+           
+        </div>
     </form>
+</div>
+
+</body>
+<style>
+    .login{
+
+        position: absolute;
+        width:30%;
+        top: 25%;
+        left:35%;
+        border: 1px solid #051775;
+        border-radius: 80px 0px 80px 0px;
+        padding: 30px 30px;
+        
+    }
+    .entra{
+        width:30%;
+    }
+    #senha{
+        background-color: white;
+        color: black;
+        border-radius: 50px 50px 50px 50px;
+        margin: 0.5em;
+        margin-left: 45%;
+        width: 300%;
+        border-color: #051775;
+    }
+    .cadastre-se{
+        color: #051775;
+    }
+    label{
+        color: #051775;
+        font-weight: bold;
+    }
+
+</style>
 
 
 {% endblock %}

@@ -5,6 +5,7 @@
 {% block title %}Cadastro{% endblock %}
 
 {% block content %}
+<body>
 <div class="next-page">
     <nav class="navbar navbar-expand-lg next-page">
       <div class="container-fluid">
@@ -27,15 +28,63 @@
       </div>  
     </nav>  
 </div>
-<div class="atendente">
-    <header class="header-atendente">
-        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png" alt="atendente" border="0" />
-      <span><strong id="atendente-voice">&nbsp; Cadastro neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
-    </header>
-</div>
-    <form method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
-    </form>
+  <div class="cadastro">
+  <div class="atendente">
+      <header class="header-atendente">
+          <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png" alt="atendente" border="0" />
+        <span><strong id="atendente-voice">&nbsp; Cadastro neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+      </header>
+  </div>
+      <div> 
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <br>
+            
+            <button class="btn btn-success" id="cadastrar" type="submit">Cadastrar</button>
+          
+        </form>
+        <a href="{% url 'account_login' %}"><button class="btn btn-success" id="voltarLogin" type="submit">JÁ POSSOU UMA CONTA</button></a>
+    
+
+      </div>
+  </div>
+
+</body>
+<style>
+  .cadastro{
+    position: absolute;
+    width:30%;
+    top: 32%;
+    left:35%;
+    border: 1px solid #051775;
+    border-radius: 80px 0px 80px 0px;
+    padding: 30px 30px;
+  }
+  #cadastrar{
+    margin-left: 10%;
+    width: 80%;
+    background-color: #051775;
+    border-radius: 50px 50px 50px 50px;
+  }
+  #voltarLogin{
+    margin-left: 10%;
+    margin-top: 10px;
+    width: 80%;
+    color: black;
+    border-radius: 50px 50px 50px 50px;
+  }
+  label{
+        color: #051775;
+        font-weight: bold;
+    }
+  .btn-success{
+    border-color: #051775;
+  }
+  .btn-success:hover{
+    background-color: #051775;
+  }
+
+</style>  
 {% endblock %}
