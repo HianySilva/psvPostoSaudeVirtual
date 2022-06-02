@@ -35,6 +35,7 @@
         <span><strong id="atendente-voice">&nbsp; Cadastro neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
       </header>
   </div>
+  <br>
       <div> 
         <form method="post">
             {% csrf_token %}
@@ -53,6 +54,9 @@
 
 </body>
 <style>
+  form{
+    background-color: #051775;
+  }
   .cadastro{
     position: absolute;
     width:30%;
@@ -61,29 +65,31 @@
     border: 1px solid #051775;
     border-radius: 80px 0px 80px 0px;
     padding: 30px 30px;
+    background-color: #051775;
   }
   #cadastrar{
     margin-left: 10%;
     width: 80%;
-    background-color: #051775;
+    background-color: red;
     border-radius: 50px 50px 50px 50px;
   }
   #voltarLogin{
     margin-left: 10%;
     margin-top: 10px;
     width: 80%;
-    color: black;
     border-radius: 50px 50px 50px 50px;
   }
   label{
-        color: #051775;
+        color: white;
         font-weight: bold;
     }
   .btn-success{
-    border-color: #051775;
+    border-color:white;
   }
   .btn-success:hover{
-    background-color: #051775;
+    background-color: white;
+    color: #051775;
+    border-color: white;
   }
 
 </style>  

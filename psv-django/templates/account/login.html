@@ -5,27 +5,7 @@
 {% block title %}Posto Saúde virtual{% endblock %}
 
 {% block content %}
-<style>
-    fieldset {
-        border: 1px solid red;
-        background-color: #051775;
-        border-radius: 50px 50px 50px 50px;
-        height: 5vh;
-        width: 10vw;
-    }
-    a {
-        text-decoration: none;
-        color: #ffffff;
-    }
-    h1 {
-        font-size: 13pt;
-        text-align: center;
-        margin-top: 0.3em;
-    }
-    #botao-cadastrar-logar-sair {
-        font-size: 13pt;
-    }
-</style>
+
 <body>
 
 
@@ -37,6 +17,7 @@
           <span><strong id="atendente-voice">&nbsp; Logar neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
         </header>
     </div>
+    <br>
     <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
@@ -48,18 +29,35 @@
 
             <div class="entra">
                 <button class="btn btn-success" id="entrar" type="submit">Entrar</button>
-                <button class="btn btn-success" id="senha" type="submit">Esqueceu sua senha? </button>
+              
             </div>
         </div>
-        <div>
-            <h1>Não tem uma conta? <a class="cadastre-se" href="{% url 'account_signup' %}">Cadastre-se</a></h1>
-           
-        </div>
     </form>
+    <div>
+        <button class="btn btn-success" id="esqueceuSenha" >Esqueceu sua senha? </button>
+    </div>
+    <div>
+        <h1 class="text">Não tem uma conta? <a class="cadastre-se" href="{% url 'account_signup' %}">Cadastre-se</a></h1>
+       
+    </div>
 </div>
 
 </body>
 <style>
+    #esqueceuSenha{
+        width: 75%;
+        margin-left: 12%;
+        border-color: #ffffff;
+        border-radius: 50px 50px 50px 50px;
+
+    }
+    .btn-success:hover{
+    background-color:white;
+    color: #051775;
+  }
+    form{
+        background-color: #051775;
+    }
     .login{
 
         position: absolute;
@@ -69,28 +67,42 @@
         border: 1px solid #051775;
         border-radius: 80px 0px 80px 0px;
         padding: 30px 30px;
+        background-color: #051775;
+        
         
     }
     .entra{
         width:30%;
     }
     #senha{
-        background-color: white;
-        color: black;
+        background-color:#051775;
+        color:white ;
         border-radius: 50px 50px 50px 50px;
         margin: 0.5em;
         margin-left: 45%;
         width: 300%;
-        border-color: #051775;
+        border-color: white;
     }
     .cadastre-se{
-        color: #051775;
+        color:	#87CEEB;
     }
     label{
-        color: #051775;
+        color: white;
         font-weight: bold;
     }
+    .text{
+        color: #ffffff;
+    }
 
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    h1 {
+        font-size: 13pt;
+        text-align: center;
+        margin-top: 0.3em;
+    }
 </style>
 
 
