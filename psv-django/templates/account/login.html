@@ -5,6 +5,27 @@
 {% block title %}Posto Saúde virtual{% endblock %}
 
 {% block content %}
+<style>
+    fieldset {
+        border: 1px solid red;
+        background-color: #051775;
+        border-radius: 50px 50px 50px 50px;
+        height: 5vh;
+        width: 10vw;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    h1 {
+        font-size: 13pt;
+        text-align: center;
+        margin-top: 0.3em;
+    }
+    #botao-cadastrar-logar-sair {
+        font-size: 13pt;
+    }
+</style>
 
 <div class="atendente-login">
     <header class="header-atendente">
@@ -17,12 +38,18 @@
         {{ form|crispy }}
 
 
-        <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Entrar</button>
+        
 
-        <div>
-            <a href="{% url 'account_signup' %}">Cadastre-se</a>
+        <div class="row">
+            <div class="col-6">
+                <fieldset>
+                    <a href="{% url 'account_signup' %}"><h1>Cadastre-se</h1></a>
+                </fieldset>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Entrar</button>
+            </div>
         </div>
-  
     </form>
 
 
