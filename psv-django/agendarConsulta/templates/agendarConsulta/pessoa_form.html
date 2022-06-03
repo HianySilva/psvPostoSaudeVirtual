@@ -3,14 +3,7 @@
 {% block title %}Posto Saúde Virtual{% endblock %}
 
 {% block content %}
-<style>
-    .atendenteAg{
-        margin-top: 1em;
-    }
-    input{
-        width: 100%;
-  }
-</style>
+
 <body>
 <div class="cadastroUsuario">
 <div class="atendenteAg">
@@ -23,16 +16,43 @@
     {% csrf_token %}
 
       {{ form.as_p}}
-    <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
+    <button class="btn btn-success" id="cadastrarUsuario" type="submit">Cadastrar</button>
 </form> 
 </div>   
 </body>
 <style>
    .cadastroUsuario{
+        position: absolute;
         width:40%;
+        border: 1px solid #051775;
+        padding: 30px 30px;
+        top: 25%;
+        left:30%;
+        background-color: #051775;
    } 
+   form{
+    background-color: #051775;
+
+   }
+   label{
+        color: white;
+        font-weight: bold;
+    }
    textarea{
     width: 100%;
+    height: 9vh;
    }
+   input{
+        width: 100%;
+        background-color:white;
+
+  }
+  #cadastrarUsuario{
+      width: 80%;
+      margin-left: 10%;
+      background-color: #66C4F9;
+      border-color: white;
+    
+  }
 </style>
 {% endblock %}
