@@ -1,0 +1,34 @@
+{% extends 'menu.html' %}
+
+{% block title %}Posto Saúde Virtual{% endblock %}
+
+{% block content %}
+<style>
+    .atendenteAg{
+        margin-top: 1em;
+    }
+    input{
+        width: 100%;
+  }
+</style>
+<body>
+<div class="cabecalho-logo">
+    <header class="cabecalho">
+        <img class="logo" src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
+        <span><strong>Agendamento de Consulta</strong></span>
+    </header>
+</div>
+<div class="atendenteAg">
+    <header class="header-atendente">
+        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+      <span><strong id="atendente-voice">&nbsp; Cadastrando Consultas<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+    </header>
+</div>
+<form method="post">
+    {% csrf_token %}
+
+      {{ form.as_p}}
+    <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
+</form>    
+</body>
+{% endblock %}
