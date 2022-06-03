@@ -1,0 +1,74 @@
+{% extends 'menu.html' %}
+
+{% block title %}Posto Saúde Virtual{% endblock %}
+
+{% block content %}
+<style>
+    .form-busca{
+        margin-top: 1em;
+    }
+    #botao-pesquisa{
+        color: #051775;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    table {
+        background-color: #051775;
+    }
+    thead {
+        color:black;
+    }
+    tbody {
+        color: black;
+    }
+    h1 {
+        color: #051775;
+        font-size: 20pt;
+    }
+    .bi-pencil-square{
+        color: black;
+    }
+    .bi-trash3{
+        color: black;
+
+    }
+</style>
+
+<form action="" method="get" class="form-busca">
+    <input type="text" name="tipo_Da_Consulta" placeholder="Buscar por tipo de consulta" id="busca">
+    <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+<div class="table-responsive">
+    <h1> <center>Lista de consultas médica</center></h1>
+    <table class="table table-primary table-sm">
+        
+        <thead>
+            <tr>
+                <th>Tipo De Consulta</th>
+                <th>Turno</th>
+                <th>Dia Da Semana</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for agendamento in object_list %}
+            <tr>
+                <td>{{ agendamento.tipo_Da_Consulta }}</td>
+                <td>{{ agendamento.turno }}</td>
+                <td>{{ agendamento.dia_Da_Semana }}</td>
+                <td>
+                    {% if agendamento.status %}
+                        Disponível
+                    {% else %}
+                        Não Disponível
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+   
+{% endblock %}
