@@ -1,7 +1,6 @@
-import imp
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from .models import Medico
+from .models import Medico 
 from .forms import MedicoForm
 
 class ListaMedicoView(ListView):
@@ -27,5 +26,5 @@ class MedicoUpdateView(UpdateView):
     success_url = '/medicos/'
 
 class MedicoDeleteView(DeleteView):
-    model = Medico
+    model = Medico 
     success_url = '/medicos/'
