@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'medico',
     'agendarConsulta',
+    'agendarConsultaP2',
 ]
 
 MIDDLEWARE = [

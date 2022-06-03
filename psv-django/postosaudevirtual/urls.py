@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('pages.urls', namespace='pages')),
     path('medicos/', include('medico.urls')),
     path('agendarConsulta/', include('agendarConsulta.urls')),
+    path('agendarConsultaP2/', include('agendarConsultaP2.urls')),
 ]
