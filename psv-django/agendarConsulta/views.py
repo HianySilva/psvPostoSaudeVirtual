@@ -5,14 +5,14 @@ from .forms import PessoaForm
 
 class ListaPessoaView(ListView):
     model = Pessoa
-    queryset =Pessoa.objects.all().order_by('nome_completo')
+    queryset =Pessoa.objects.all().order_by('cPF')
 
     def get_queryset(self):
         queryset = super().get_queryset();
-        filtro_nome =self.request.GET.get('nome') or None
+        filtro_cPF =self.request.GET.get('cPF') or None
 
-        if filtro_nome:
-            queryset = queryset.filter(nome_completo__contains=filtro_nome) 
+        if filtro_cPF:
+            queryset = queryset.filter(cPF__contains=filtro_cPF) 
         return queryset
 
 class PessoaCreateView(CreateView):
