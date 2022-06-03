@@ -34,6 +34,9 @@
         color: black;
 
     }
+    .fa-solid{
+        color: #051775;
+    }
 </style>
 
 <form action="" method="get" class="form-busca">
@@ -50,6 +53,7 @@
                 <th>Turno</th>
                 <th>Dia Da Semana</th>
                 <th>Status</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -65,10 +69,12 @@
                         Não Disponível
                     {% endif %}
                 </td>
+                <td><a href="{% url 'pessoa.novo' %}"><i class="fa-solid fa-square-check"></i></a></i></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+
    
 {% endblock %}

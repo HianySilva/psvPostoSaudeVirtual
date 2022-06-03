@@ -12,12 +12,7 @@
   }
 </style>
 <body>
-<div class="cabecalho-logo">
-    <header class="cabecalho">
-        <img class="logo" src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
-        <span><strong>Agendamento de Consulta</strong></span>
-    </header>
-</div>
+<div class="cadastroUsuario">
 <div class="atendenteAg">
     <header class="header-atendente">
         <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
@@ -29,6 +24,15 @@
 
       {{ form.as_p}}
     <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
-</form>    
+</form> 
+</div>   
 </body>
+<style>
+   .cadastroUsuario{
+        width:40%;
+   } 
+   textarea{
+    width: 100%;
+   }
+</style>
 {% endblock %}
