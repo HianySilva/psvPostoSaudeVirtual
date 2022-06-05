@@ -9,3 +9,4 @@ class FuncionalidadesView(TemplateView):
 
 class Consultar_agendarView(TemplateView):
     template_name = 'Consultar_agendar.html'
+
