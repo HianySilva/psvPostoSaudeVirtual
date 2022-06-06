@@ -3,6 +3,13 @@
 {% block title %}Posto Saúde Virtual{% endblock %}
 
 {% block content %}
+<style>
+  .card {
+    width: 8rem;
+    border-radius: 100%;
+  }
+</style>
+
 <div class="next-page">
     <nav class="navbar navbar-expand-lg next-page">
       <div class="container-fluid">
@@ -26,73 +33,73 @@
     </nav>  
 </div>
 <div class="corpo-img">
-    <img src="https://i.ibb.co/xsSPkvC/body-picture2.png" alt="body-picture2" id="body-picturef"> 
+    <img src="https://i.ibb.co/xsSPkvC/body-picture2.png" id="body-picturef"> 
 </div>
 <div class="row">
     <div class="col-3">
       <a href="{% url 'pages:cadastrar_agendar' %}">
-        <div class="card" style="width: 8rem;">
-          <img src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
+        <div class="card">
+          <img class="card-img" src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
         </div>
       </a>
     </div>
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/52Bp1jz/visualizar-Exames.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/52Bp1jz/visualizar-Exames.png">
       </div>
     </div>
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/4JBj079/atendimento-Virtual.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/4JBj079/atendimento-Virtual.png">
       </div>
     </div>
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/jykmCXM/medicamentos-Disponiveis.png">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/XfBTnMQ/requisitar-Visitas-Domicilio.png">
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/Vpj3Km9/localizacao.png">
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/7CXNhbd/secao-Perguntas.png">
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/JRDHh8k/chat-Online.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/jykmCXM/medicamentos-Disponiveis.png">
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/9pbTPq0/fazer-Sicronizacao-Sus.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/XfBTnMQ/requisitar-Visitas-Domicilio.png">
       </div>
     </div>
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/tXt1dj9/gerar-Declaracao.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/Vpj3Km9/localizacao.png">
       </div>
     </div>
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/N39Yznt/formularios-Online.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/7CXNhbd/secao-Perguntas.png">
       </div>
     </div>
     <div class="col-3">
-      <div class="card" style="width: 8rem;">
-        <img src="https://i.ibb.co/gzpdb2L/visualizar-Agenda.png">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/JRDHh8k/chat-Online.png">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/9pbTPq0/fazer-Sicronizacao-Sus.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/tXt1dj9/gerar-Declaracao.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/N39Yznt/formularios-Online.png">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img" src="https://i.ibb.co/gzpdb2L/visualizar-Agenda.png">
       </div>
     </div>
 </div>
