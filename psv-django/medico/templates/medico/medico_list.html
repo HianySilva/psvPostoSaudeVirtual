@@ -8,7 +8,7 @@
         margin-top: 1em;
     }
     #botao-pesquisa{
-        color: #051775;
+        background-color: #051775;
     }
     a {
         text-decoration: none;
@@ -18,10 +18,10 @@
         background-color: #051775;
     }
     thead {
-        color: black;
+        color:white;
     }
     tbody {
-        color: black;
+        color:white;
     }
     h1 {
         color: #051775;
@@ -46,13 +46,14 @@
 </style>
 
 <form action="" method="get" class="form-busca">
+    <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
     <input type="text" name="nome" placeholder="Buscar por nome" id="busca">
     <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
 <div class="table-responsive">
-    <h1> <center>Lista de Médicos</center></h1>
-    
-    <table class="table table-primary table-sm">
+    <h1> <center><b>Lista de Médicos</b></center></h1>
+    <br>
+    <table class="table table-blue table-sm">
         
         <thead>
             <tr>
