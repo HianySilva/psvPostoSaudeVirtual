@@ -14,32 +14,28 @@ os cidadãos e profissionais enviem mensagens e feedbacks uns para os outros.
 
 ## Tela de Cadastro
 
-[![Screenshot-2022-02-18-143831.png](https://i.postimg.cc/SQ2vpwxR/Screenshot-2022-02-18-143831.png)](https://postimg.cc/23YwQ9vN)
+[![tela-Cadastro.png](https://i.postimg.cc/FRn5C0Dh/tela-Cadastro.png)](https://postimg.cc/dkdxLkbf)
 
 ## Tela de Login
 
-[![Screenshot-2022-02-18-143956.png](https://i.postimg.cc/3NkHPT87/Screenshot-2022-02-18-143956.png)](https://postimg.cc/rR2br7RY)
+[![tela-Login.png](https://i.postimg.cc/5214Cqrr/tela-Login.png)](https://postimg.cc/HVZ1G5d0)
 
 ## Tela Principal
 
-[![Screenshot-2022-02-18-143445.png](https://i.postimg.cc/htLqFMBJ/Screenshot-2022-02-18-143445.png)](https://postimg.cc/pmLSzfyx)
+[![tela-Home-Logada.png](https://i.postimg.cc/x1RzJd6K/tela-Home-Logada.png)](https://postimg.cc/v44BCGFB)
 
-## Tela com Todas as Funcionalidades
+## Tela Visualizar Todas as Funcionalidades
 
-[![Screenshot-2022-02-18-145326.png](https://i.postimg.cc/59D0bPZp/Screenshot-2022-02-18-145326.png)](https://postimg.cc/F1gmxxFJ)
+[![tela-Visualizar-Todas-Funcionalidades.png](https://i.postimg.cc/vHC2xzZd/tela-Visualizar-Todas-Funcionalidades.png)](https://postimg.cc/jLQ4Gyf8)
 
-## Tela de Agendar Consulta
+## Tela de Listagem de Médicos
 
-[![Screenshot-2022-02-18-144900.png](https://i.postimg.cc/B6kqZ6wt/Screenshot-2022-02-18-144900.png)](https://postimg.cc/YGNcbp7w)
+[![tela-Listagem-Medicos.png](https://i.postimg.cc/FzvZ9Wr9/tela-Listagem-Medicos.png)](https://postimg.cc/k6j8syRZ)
 
-## Tela de Atendimento Domiciliar
+## Tela de Visualizar Consultas Disponíveis
 
-[![Screenshot-2022-02-18-145039.png](https://i.postimg.cc/bvFPLrPL/Screenshot-2022-02-18-145039.png)](https://postimg.cc/xkHB10cb)
+[![tela-Vizualizar-Consultas-Disponiveis.png](https://i.postimg.cc/65kdwbYF/tela-Vizualizar-Consultas-Disponiveis.png)](https://postimg.cc/QHqBJmLq)
 
-## Tela de Visualizar Resultados de Exames
+## Tela de Agendamento de Consulta Passo 1
 
-[![Screenshot-2022-02-18-145137.png](https://i.postimg.cc/FRtW9XVN/Screenshot-2022-02-18-145137.png)](https://postimg.cc/LqTBT7Wb)
-
-## Tela de Seção de Perguntas Frequentes
-
-[![Screenshot-2022-02-18-145217.png](https://i.postimg.cc/SRSGsS2F/Screenshot-2022-02-18-145217.png)](https://postimg.cc/hzYmZq1p)
+[![tela-Agendar-Consulta-Passo1.png](https://i.postimg.cc/mg81hb4z/tela-Agendar-Consulta-Passo1.png)](https://postimg.cc/18V3j1fs)
