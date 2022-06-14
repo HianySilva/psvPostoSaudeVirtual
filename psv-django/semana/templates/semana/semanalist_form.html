@@ -1,0 +1,11 @@
+<form method="post">
+    
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-success" id="agendar" type="submit">Cadastrar</button>
+</form>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
