@@ -38,20 +38,37 @@
         color:white;
     }
     .cadastrar{
-        background-color: #051775;
+        background-color: #00BFFF;
         color: white;
         border-color: #ffffff;
         border-radius: 50px 50px 50px 50px;
     }
     .agendar{
-        border-color: #ffffff;
+        border-color:white;
         border-radius: 50px 50px 50px 50px;
+        background-color: #051775;
+        color: #ffffff;
 
     }
     .fa-square {
         color: 	#00BFFF;
         
     }
+    .modal-dialog{
+        background-color: #00BFFF;
+    }
+    .modal-header{
+        background-color: #051775;
+    }
+    .modal-body{
+        background-color: #051775;
+        color: white;
+    }
+    .modal-footer{
+        background-color: #051775;
+
+    }
+
  
 
 
@@ -65,7 +82,7 @@
 </form>
 <div class="table-responsive">
     <br>
-    <h1> <center><b>Consultas Disponível</b></center></h1>
+    <h1> <center><b>Consultas</b></center></h1>
     <br>
     <table class="table table-blue table-sm">
         
@@ -93,7 +110,9 @@
                 </td>
                 <td><!-- Button trigger modal -->
                     <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="fa-solid fa-square"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                          </svg>
                     </button>
             </tr>
             {% endfor %}
@@ -118,7 +137,7 @@
 
         </div>
         <div class="modal-footer">
-          <a href="#"><button type="button" class="agendar">Agendar</button></a>
+          <a href="{% url 'agenda.index' %}"><button type="button" class="agendar">Agendar</button></a>
           <a href="{% url 'pessoa.novo' %}"><button type="button" class="cadastrar">Cadastrar</button></a>
         </div>
       </div>

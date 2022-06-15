@@ -31,8 +31,24 @@ class SemanaList(models.Model):
     ]
     Semana = models.CharField(max_length=256, choices = SList)
 
-
 class Agendar(models.Model):
+    FRESHMAN = 'FR'
+    SOPHOMORE = 'SO'
+    JUNIOR = 'JR'
+    SENIOR = 'SR'
+    
     tipo_consulta = models.ForeignKey (TipoConsulta, on_delete=models.CASCADE)
     data = models.DateField()
-
+    YEAR_IN_SCHOOL_CHOICES = (
+        (FRESHMAN, 'Freshman'),
+        (SOPHOMORE, 'Sophomore'),
+        (JUNIOR, 'Junior'),
+        (SENIOR, 'Senior'),
+    )
+    year_in_school = models.CharField(
+        max_length=2,
+        choices=YEAR_IN_SCHOOL_CHOICES,
+        default=FRESHMAN,
+        blank=True,
+        null=True
+    , )

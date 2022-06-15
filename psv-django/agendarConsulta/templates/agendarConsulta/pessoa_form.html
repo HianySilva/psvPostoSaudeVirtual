@@ -16,8 +16,11 @@
     {% csrf_token %}
 
       {{ form.as_p}}
-    <button class="btn btn-success" id="cadastrarUsuario" type="submit">Cadastrar</button>
+    <button class="btn btn-success" id="cadastrarUsuario" type="submit">Avançar</button>
+      
+  
 </form> 
+<a href="{% url 'consulta.index' %}"><button class="btn btn-success" id="cadastrarUsuario1" >Voltar</button></a>
 </div>   
 </body>
 <style>
@@ -30,6 +33,19 @@
         left:30%;
         background-color: #051775;
    } 
+
+   #cadastrarUsuario1{
+
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+    background-color:#051775;
+    border-color: white;
+    
+
+
+   }
+
    form{
     background-color: #051775;
 
