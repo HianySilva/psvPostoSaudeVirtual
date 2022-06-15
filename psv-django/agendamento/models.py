@@ -15,40 +15,26 @@ class TurnoList(models.Model):
     ]
     List = models.CharField(max_length=256, choices = TList)
     
-
-class SemanaList(models.Model):
-    SEGUNDA = 'SEG'
-    TERCA = 'TERC'
-    QUARTA = 'QUAR'
-    QUINTA =' QUIN'
-    SEXTA = 'SEX'
-    SList =[
-        (SEGUNDA, 'Segunda'),
-        (TERCA, 'Terça'),
-        (QUARTA, 'Quarta'),
-        (QUINTA, 'Quinta'),
-        (SEXTA,  'Sexta'), 
-    ]
-    Semana = models.CharField(max_length=256, choices = SList)
-
 class Agendar(models.Model):
-    FRESHMAN = 'FR'
-    SOPHOMORE = 'SO'
-    JUNIOR = 'JR'
-    SENIOR = 'SR'
+    SEGUNDA = 'SD'
+    TERCA = 'TC'
+    QUARTA = 'QR'
+    QUINTA = 'QI'
+    SEXTA = 'ST'
     
     tipo_consulta = models.ForeignKey (TipoConsulta, on_delete=models.CASCADE)
     data = models.DateField()
-    YEAR_IN_SCHOOL_CHOICES = (
-        (FRESHMAN, 'Freshman'),
-        (SOPHOMORE, 'Sophomore'),
-        (JUNIOR, 'Junior'),
-        (SENIOR, 'Senior'),
+    DIA_DA_SEMANA_CHOICES = (
+        (SEGUNDA, 'Segunda'),
+        (TERCA, 'Terca'),
+        (QUARTA, 'Quanta'),
+        (QUINTA, 'Quinta'),
+        (SEXTA, 'Sexta'),
     )
-    year_in_school = models.CharField(
+    dia_da_semana = models.CharField(
         max_length=2,
-        choices=YEAR_IN_SCHOOL_CHOICES,
-        default=FRESHMAN,
+        choices=DIA_DA_SEMANA_CHOICES,
+        default=SEGUNDA,
         blank=True,
         null=True
     , )
