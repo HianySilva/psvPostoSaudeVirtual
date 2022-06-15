@@ -9,7 +9,7 @@ class AgendarForm(forms.ModelForm):
     required_css_class = 'required'
     class Meta:
         model = Agendar
-        fields = ('tipo_consulta','data', 'dia_da_semana')
+        fields = ('tipo_consulta','data', 'dia_da_semana','turno')
         widgets = {
             'data': DateInput()
         }
