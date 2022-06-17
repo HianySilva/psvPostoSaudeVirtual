@@ -1,10 +1,10 @@
-{% extends 'menu.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
 {% block title %}<title>Página de Agendamento</title>{% endblock %}
 
-{% block content %}
+{% block conteudo %}
 <body>
 <link rel="stylesheet" href="{% static 'css/agendar_form.css' %}">
     <div class="agendamento">
@@ -26,3 +26,6 @@
     </div>
 </body>
 {% endblock %}
+
+{% block rodape %} 
+{% endblock %} 

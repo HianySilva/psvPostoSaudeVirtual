@@ -1,10 +1,10 @@
-{% extends 'menu.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
 {% block title %}<title>Cadastro de Consultas</title>{% endblock %}
 
-{% block content %}
+{% block conteudo %}
 <link rel="stylesheet" href="{% static 'css/agendamento_form.css' %}">
 <body>
 <div class="cabecalho-logo">
@@ -27,3 +27,6 @@
 </form>    
 </body>
 {% endblock %}
+
+{% block rodape %} 
+{% endblock %} 
