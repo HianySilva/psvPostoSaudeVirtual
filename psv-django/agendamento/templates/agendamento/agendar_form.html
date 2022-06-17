@@ -1,16 +1,17 @@
-
 {% extends 'menu.html' %}
 
-{% block title %}agendamento{% endblock %}
+{% load static %}
+
+{% block title %}<title>Página de Agendamento</title>{% endblock %}
 
 {% block content %}
 <body>
-
+<link rel="stylesheet" href="{% static 'css/agendar_form.css' %}">
     <div class="agendamento">
         <form method="post">
             <div class="atendenteAg">
                 <header class="header-atendente">
-                    <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+                    <img class="atendente-img" src="{% static 'img/atendente.png' %}">
                   <span><strong id="atendente-voice">&nbsp; Preencha os dados abaixo<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
                 </header>
             </div>
@@ -24,31 +25,4 @@
         
     </div>
 </body>
-
-<style>
-    #agendar{
-        background-color: #66C4F9;
-        width: 80%;
-    }
-    .agendamento{
-        position: absolute;
-        width:40%;
-        border: 1px solid #051775;
-        padding: 30px 30px;
-        top: 25%;
-        left:30%;
-        background-color: #051775;
-
-    }
-    form{
-        color:white;
-    }
-    select{
-        width: 100%;
-    }
-    input{
-        width: 100%;
-    }
-
-</style>
 {% endblock %}
