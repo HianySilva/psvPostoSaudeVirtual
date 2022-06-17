@@ -1,49 +1,20 @@
 {% extends 'menu.html' %}
 
-{% block title %}Posto Saúde Virtual{% endblock %}
+{% load static %}
+
+{% block title %}<title>Página de Informações Pessoais</title>{% endblock %}
 
 {% block content %}
-<style>
-    .form-busca{
-        margin-top: 1em;
-    }
-    #botao-pesquisa{
-        color: #051775;
-    }
-    a {
-        text-decoration: none;
-        color: #ffffff;
-    }
-    table {
-        background-color: #051775;
-    }
-    thead {
-        color:black;
-    }
-    tbody {
-        color: black;
-    }
-    h1 {
-        color: #051775;
-        font-size: 20pt;
-    }
-    .bi-pencil-square{
-        color: black;
-    }
-    .bi-trash3{
-        color: black;
-
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/pessoa_list.css' %}">
 
 <form action="" method="get" class="form-busca">
-    <input type="text" name="cPF" placeholder="Buscar por CPF" id="busca">
+    <img class="atendente-img" src="{% static 'img/atendente.png' %}">
+    <input type="text" name="nome" placeholder="Buscar por CPF" id="busca">
     <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
-<button class="btn btn-danger" id="botao-cadastrar-logar-sair-1" type="submit"><a href="{% url 'pessoa.novo' %}">Novo</a></button>
 <div class="table-responsive">
-    <h1> <center>Lista de informações pessoais</center></h1>
-    <table class="table table-primary table-sm">
+    <h1> <center><b>Lista de informações pessoais</b></center></h1>
+    <table class="table table-blue table-sm">
         
         <thead>
             

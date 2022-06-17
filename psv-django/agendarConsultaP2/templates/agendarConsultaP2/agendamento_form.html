@@ -1,16 +1,11 @@
 {% extends 'menu.html' %}
 
-{% block title %}Posto Saúde Virtual{% endblock %}
+{% load static %}
+
+{% block title %}<title>Cadastro de Consultas</title>{% endblock %}
 
 {% block content %}
-<style>
-    .atendenteAg{
-        margin-top: 1em;
-    }
-    input{
-        width: 100%;
-  }
-</style>
+<link rel="stylesheet" href="{% static 'css/agendamento_form.css' %}">
 <body>
 <div class="cabecalho-logo">
     <header class="cabecalho">
@@ -20,15 +15,15 @@
 </div>
 <div class="atendenteAg">
     <header class="header-atendente">
-        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
-      <span><strong id="atendente-voice">&nbsp; Cadastrando Consultas<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        <img class="atendente-img" src="{% static 'img/atendente.png' %}">
+        <span><strong id="atendente-voice">&nbsp; Cadastrando Consultas<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
     </header>
 </div>
 <form method="post">
     {% csrf_token %}
 
       {{ form.as_p}}
-    <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
+    <button class="btn btn-success" id="cadastrar" type="submit">Cadastrar</button>
 </form>    
 </body>
 {% endblock %}

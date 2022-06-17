@@ -1,84 +1,15 @@
 {% extends 'menu.html' %}
 
-{% block title %}Posto Saúde Virtual{% endblock %}
+{% load static %}
+
+{% block title %}<title>Página de Consultas</title>{% endblock %}
 
 {% block content %}
-<style>
-    .form-busca{
-        margin-top: 1em;
-    }
-    #botao-pesquisa{
-        background-color: #051775;
-    }
-    a {
-        text-decoration: none;
-        color: #ffffff;
-    }
-    table {
-        background-color: #051775;
-    }
-    thead {
-        color:white;
-    }
-    tbody {
-        color: white;
-    }
-    h1 {
-        color: #051775;
-        font-size: 20pt;
-    }
-    .bi-pencil-square{
-        color: black;
-    }
-    .bi-trash3{
-        color: black;
-
-    }
-    .fa-solid{
-        color:white;
-    }
-    .cadastrar{
-        background-color: #00BFFF;
-        color: white;
-        border-color: #ffffff;
-        border-radius: 50px 50px 50px 50px;
-    }
-    .agendar{
-        border-color:white;
-        border-radius: 50px 50px 50px 50px;
-        background-color: #051775;
-        color: #ffffff;
-
-    }
-    .fa-square {
-        color: 	#00BFFF;
-        
-    }
-    .modal-dialog{
-        background-color: #00BFFF;
-    }
-    .modal-header{
-        background-color: #051775;
-    }
-    .modal-body{
-        background-color: #051775;
-        color: white;
-    }
-    .modal-footer{
-        background-color: #051775;
-
-    }
-
- 
-
-
-
-</style>
-
+<link rel="stylesheet" href="{% static 'css/agendamento_list.css' %}">
 <form action="" method="get" class="form-busca">
-    <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
-    <input type="text" name="tipo_Da_Consulta" placeholder="Buscar por tipo de consulta" id="busca">
-    <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+  <img class="atendente-img" src="{% static 'img/atendente.png' %}">
+  <input type="text" name="tipo_Da_Consulta" placeholder="Buscar por tipo de consulta" id="busca">
+  <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
 <div class="table-responsive">
     <br>
@@ -142,7 +73,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-   
+  </div>   
 {% endblock %}
