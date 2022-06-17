@@ -1,8 +1,11 @@
 {% extends 'menu.html' %}
 
-{% block title %}Posto Saúde Virtual{% endblock %}
+{% block title %}<title>Página Inicial</title>{% endblock %}
+
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 <body>
   {% if user.is_authenticated %}
 
@@ -10,29 +13,29 @@
 
 
   <div class="corpo-img">
-      <img src="https://i.ibb.co/9Tc2Mxh/body-picture.png" id="body-picture">
+      <img src="{% static 'img/telaPrincipal.png' %}" id="body-picture">
     </div>
     <div class="row">
       <div class="col-3">
         <a href="{% url 'consulta.index' %}">
           <div class="card">
-            <img class="card-img" src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
+           <img class="card-img" src="{% static 'img/agendamentoConsulta.png' %}">
           </div>
         </a>
       </div>
       <div class="col-3">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/52Bp1jz/visualizar-Exames.png">
+          <img class="card-img" src="{% static 'img/visualizarExames.png' %}">
         </div>
       </div>
       <div class="col-3">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/4JBj079/atendimento-Virtual.png">
+          <img class="card-img" src="{% static 'img/atendimentoVirtual.png' %}" >
         </div>
       </div>
       <div class="col-3">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/jykmCXM/medicamentos-Disponiveis.png">
+          <img class="card-img" src="{% static 'img/medicamentosDisponiveis.png' %}">
         </div>
       </div>
     </div>
@@ -63,34 +66,34 @@
   </div>
   {% else %}
   <div class="corpo-img">
-    <img src="https://i.ibb.co/9Tc2Mxh/body-picture.png" id="body-picture">
+    <img src="{% static 'img/telaPrincipal.png' %}" id="body-picture">
   </div>
   <div class="row">
     <div class="col-3">
       <a href="{% url 'account_login' %}">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/Zhy8pm1/agendamento-Consulta.png">
+          <img class="card-img" src="{% static 'img/agendamentoConsulta.png' %}">
         </div>
       </a>
     </div>
     <div class="col-3">
       <a href="{% url 'account_login' %}">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/52Bp1jz/visualizar-Exames.png">
+          <img class="card-img" src="{% static 'img/visualizarExames.png' %}">
         </div>
       </a>
     </div>
     <div class="col-3">
       <a href="{% url 'account_login' %}">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/4JBj079/atendimento-Virtual.png">
+          <img class="card-img" src="{% static 'img/atendimentoVirtual.png' %}">
         </div>
       </a>
     </div>
     <div class="col-3">
       <a href="{% url 'account_login' %}">
         <div class="card">
-          <img class="card-img" src="https://i.ibb.co/jykmCXM/medicamentos-Disponiveis.png">
+          <img class="card-img" src="{% static 'img/medicamentosDisponiveis.png' %}">
         </div>
       </a>
     </div>
