@@ -1,16 +1,19 @@
 {% extends 'menu.html' %}
 
-{% block title %}Sair{% endblock %}
+{% block title %}<title>Sair</title>{% endblock %}
+
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/sair.css' %}">
 <div class="atendente-login">
     <header class="header-atendente">
-        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+        <img class="atendente-img" src="{% static 'img/atendente.png' %}">
         <span><strong id="atendente-voice"> &nbsp;Você tem certeza que deseja sair?<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
     </header>
 </div>
     <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
-        <button class="btn btn-danger" id="botao-cadastrar-logar-sair" type="submit">Sair</button>
+        <button class="btn btn-danger" id="botao-sair" type="submit">Sair</button>
     </form>
 {% endblock %}
