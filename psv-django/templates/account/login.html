@@ -1,4 +1,4 @@
-{% extends 'menu.html' %}
+{% extends 'base.html' %}
 
 {% load crispy_forms_tags %}
 
@@ -6,7 +6,7 @@
 
 {% block title %}<title>Página de Login</title>{% endblock %}
 
-{% block content %}
+{% block conteudo %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 <body>
 <div class="login">
@@ -37,5 +37,8 @@
        
     </div>
 </div>
-</body>
 {% endblock %}
+
+{% block rodape  %}
+{% endblock %}
+</body>

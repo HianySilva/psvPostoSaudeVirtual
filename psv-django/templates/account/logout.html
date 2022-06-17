@@ -1,10 +1,10 @@
-{% extends 'menu.html' %}
+{% extends 'base.html' %}
 
 {% block title %}<title>Sair</title>{% endblock %}
 
 {% load static %}
 
-{% block content %}
+{% block conteudo %}
 <link rel="stylesheet" href="{% static 'css/sair.css' %}">
 <div class="atendente-login">
     <header class="header-atendente">
@@ -17,3 +17,6 @@
         <button class="btn btn-danger" id="botao-sair" type="submit">Sair</button>
     </form>
 {% endblock %}
+
+{% block rodape %} 
+{% endblock %} 
