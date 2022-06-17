@@ -1,52 +1,14 @@
 {% extends 'menu.html' %}
 
-{% block title %}Posto Saúde Virtual{% endblock %}
+{% load static %}
+
+{% block title %}<title>Página de Médicos</title>{% endblock %}
 
 {% block content %}
-<style>
-    .form-busca{
-        margin-top: 1em;
-    }
-    #botao-pesquisa{
-        background-color: #051775;
-    }
-    a {
-        text-decoration: none;
-        color: #ffffff;
-    }
-    table {
-        background-color: #051775;
-    }
-    thead {
-        color:white;
-    }
-    tbody {
-        color:white;
-    }
-    h1 {
-        color: #051775;
-        font-size: 20pt;
-    }
-    .bi-pencil-square{
-        color: black;
-    }
-    .bi-trash3{
-        color: black;
-
-    }
-    #novo{
-        position: absolute;
-        left: 85%;
-    }
-    .table-responsive{
-        margin-top: 5%;
-    }
-        
-
-</style>
+<link rel="stylesheet" href="{% static 'css/medico_list.css' %}">
 
 <form action="" method="get" class="form-busca">
-    <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+    <img class="atendente-img" src="{% static 'img/atendente.png' %}">
     <input type="text" name="nome" placeholder="Buscar por nome" id="busca">
     <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
