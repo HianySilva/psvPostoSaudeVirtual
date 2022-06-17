@@ -1,0 +1,49 @@
+.atendente-img {
+    height: 10vh;
+    border-radius: 100%;
+}
+#atendente-voice {
+    background-color: #051775;
+    color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+}
+#sound {
+    margin: 0.5em;
+}
+form {
+    background-color: #051775;
+}
+.cadastro {
+    position: absolute;
+    width:30%;
+    top: 32%;
+    left:35%;
+    border: 1px solid #051775;
+    border-radius: 80px 0px 80px 0px;
+    padding: 30px 30px;
+    background-color: #051775;
+}
+#cadastrar {
+    margin-left: 10%;
+    width: 80%;
+    background-color: #66C4F9;
+    border-radius: 50px 50px 50px 50px;
+}
+#voltarLogin {
+    margin-left: 10%;
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 50px 50px 50px 50px;
+}
+label {
+    color: white;
+    font-weight: bold;
+}
+.btn-success {
+    border-color:white;
+}
+.btn-success:hover {
+    background-color: white;
+    color: #051775;
+    border-color: white;
+}

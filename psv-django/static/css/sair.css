@@ -1,0 +1,19 @@
+.atendente-img {
+    height: 10vh;
+    border-radius: 100%;
+}
+  #atendente-voice {
+    background-color: #051775;
+    color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+}
+  #sound {
+    margin: 0.5em;
+}
+#botao-sair {
+    background-color: #051775;
+    border-radius: 50px 50px 50px 50px;
+    margin: 0.5em;
+    margin-left: 90%;
+    width: 8vw;
+}

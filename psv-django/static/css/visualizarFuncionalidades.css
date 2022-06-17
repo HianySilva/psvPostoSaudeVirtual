@@ -1,0 +1,33 @@
+.corpo-img {
+  margin-top: 0.5em;
+}
+#body-picturef {
+    width: 100%;
+    height: 30vh;
+}
+.next-page {
+    background-color: #ffffff;
+}
+.row {
+    margin-top: 0.5em;
+}
+.card {
+  width: 8rem;
+  border-radius: 100%;
+}
+.card-img {
+  border-radius: 100%;
+}
+.rodape {
+  background-color: #051775;
+}
+.contatos {
+  color: #ffffff;
+  text-align: center;  
+}
+#instagram {
+  margin-right: 15%;  
+}
+#twitter {
+  margin-right: 15%;
+}

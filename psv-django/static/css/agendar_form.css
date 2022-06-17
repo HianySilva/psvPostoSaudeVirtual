@@ -1,0 +1,34 @@
+.atendente-img {
+    height: 10vh;
+    border-radius: 100%;
+}
+#atendente-voice {
+    background-color: #051775;
+    color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+}
+#sound {
+    margin: 0.5em;
+}
+#agendar {
+    background-color: #66C4F9;
+    width: 80%;
+}
+.agendamento {
+    position: absolute;
+    width:40%;
+    border: 1px solid #051775;
+    padding: 30px 30px;
+    top: 25%;
+    left:30%;
+    background-color: #051775;
+}
+form {
+    color:white;
+}
+select {
+    width: 100%;
+}
+input {
+    width: 100%;
+}
