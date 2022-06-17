@@ -1,10 +1,10 @@
-{% extends 'menu.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
 {% block title %}<title>Página de Informações Pessoais</title>{% endblock %}
 
-{% block content %}
+{% block conteudo %}
 <link rel="stylesheet" href="{% static 'css/pessoa_list.css' %}">
 
 <form action="" method="get" class="form-busca">
@@ -56,5 +56,7 @@
         </tbody>
     </table>
 </div>
-   
 {% endblock %}
+
+{% block rodape %} 
+{% endblock %} 
