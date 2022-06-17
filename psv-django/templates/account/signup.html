@@ -2,36 +2,17 @@
 +
 {% load crispy_forms_tags %}
 
-{% block title %}Cadastro{% endblock %}
+{% block title %}<title>Página de Cadastro</title>{% endblock %}
+
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/cadastrar.css' %}">
 <body>
-<div class="next-page">
-    <nav class="navbar navbar-expand-lg next-page">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link activate" aria-current="page" href="{% url 'pages:home' %}" id="second-menu"><strong>Início</strong></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-current="page" href="#" id="seta"><i class="fa-solid fa-chevron-right"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-current="page" href="#" id="second-menu"><strong>Cadastro de Usuário</strong></a>
-            </li>
-          </ul>  
-        </div>  
-      </div>  
-    </nav>  
-</div>
   <div class="cadastro">
   <div class="atendente">
       <header class="header-atendente">
-          <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png" alt="atendente" border="0" />
+          <img class="atendente-img" src="{% static 'img/atendente.png' %}">
         <span><strong id="atendente-voice">&nbsp; Cadastro neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
       </header>
   </div>
@@ -51,46 +32,5 @@
 
       </div>
   </div>
-
-</body>
-<style>
-  form{
-    background-color: #051775;
-  }
-  .cadastro{
-    position: absolute;
-    width:30%;
-    top: 32%;
-    left:35%;
-    border: 1px solid #051775;
-    border-radius: 80px 0px 80px 0px;
-    padding: 30px 30px;
-    background-color: #051775;
-  }
-  #cadastrar{
-    margin-left: 10%;
-    width: 80%;
-    background-color: #66C4F9;
-    border-radius: 50px 50px 50px 50px;
-  }
-  #voltarLogin{
-    margin-left: 10%;
-    margin-top: 10px;
-    width: 80%;
-    border-radius: 50px 50px 50px 50px;
-  }
-  label{
-        color: white;
-        font-weight: bold;
-    }
-  .btn-success{
-    border-color:white;
-  }
-  .btn-success:hover{
-    background-color: white;
-    color: #051775;
-    border-color: white;
-  }
-
-</style>  
+</body>  
 {% endblock %}
