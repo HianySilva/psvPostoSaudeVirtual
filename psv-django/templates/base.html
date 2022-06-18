@@ -25,14 +25,14 @@
   <div class="menu">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><i class="fa-solid fa-bars" id="icon-nav"></i></a>
+        <img src="{% static 'img/my-logo.png' %}" height="40" >
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link activate" aria-current="page" href="{% url 'pages:home' %}" id="first-menu">Início</a>
+              <a class="nav-link activate" aria-current="page" href="{% url 'pages:home' %}" id="first-menu"><i class="fa fa-home" id="icon-nav"></i>Início</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
