@@ -9,7 +9,7 @@
 
 <form action="" method="get" class="form-busca">
     <img class="atendente-img" src="{% static 'img/atendente.png' %}">
-    <input type="text" name="nome" placeholder="Buscar por CPF" id="busca">
+    <input type="text" name="nome" placeholder="Buscar por Nome" id="busca">
     <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
 <div class="table-responsive">
@@ -19,6 +19,7 @@
         <thead>
             
             <tr>
+                <th>Nome</th>
                 <th>Nº Do Cartão Do SUS</th>
                 <th>CPF</th>
                 <th>Data De Nascimento</th>
@@ -35,6 +36,7 @@
         <tbody>
             {% for pessoa in object_list %}
             <tr>
+                <td>{{ pessoa.nome_Completo }}</td>
                 <td>{{ pessoa.numero_Do_Cartao_Do_SUS }}</td>
                 <td>{{ pessoa.cPF }}</td>
                 <td>{{ pessoa.data_De_Nascimento|date:"d/m/y" }}</td>
