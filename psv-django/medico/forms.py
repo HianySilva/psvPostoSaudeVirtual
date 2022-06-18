@@ -5,7 +5,7 @@ from .models import Medico
 class MedicoForm(forms.ModelForm):
     class Meta:
         model = Medico
-        fields = ('nome_completo','crm','especializacao','turno','email','senha')
+        fields = ('nome_Completo','crm','especializacao','turno','email','senha')
         widgets = {
         'senha': forms.PasswordInput(),
     }

@@ -5,7 +5,7 @@ from .models import Medico
 
 class MedicoAdmin(admin.ModelAdmin):
     list_display = [
-        'nome_completo',
+        'nome_Completo',
         'crm',
         'especializacao',
         'turno',

@@ -10,4 +10,4 @@ class PessoaForm(forms.ModelForm):
     )
     class Meta:
         model = Pessoa
-        fields = ('numero_Do_Cartao_Do_SUS','cPF','data_De_Nascimento','endereco','numero_Da_Residencia', 'complemento', 'bairro', 'telefone', 'cEP', 'ponto_De_Referencia')
+        fields = ('nome_Completo','numero_Do_Cartao_Do_SUS','cPF','data_De_Nascimento','endereco','numero_Da_Residencia', 'complemento', 'bairro', 'telefone', 'cEP', 'ponto_De_Referencia')
