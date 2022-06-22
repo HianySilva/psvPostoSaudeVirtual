@@ -44,10 +44,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'pages.apps.PagesConfig',
-    'medico.apps.MedicoConfig',
-    'agendarConsulta.apps.AgendarconsultaConfig',
-    'agendarConsultaP2.apps.Agendarconsultap2Config',
-    'agendamento.apps.AgendamentoConfig',
+    'cadastros.apps.CadastrosConfig',
+    #'medico.apps.MedicoConfig',
+    #'agendarConsulta.apps.AgendarconsultaConfig',
+    #'agendarConsultaP2.apps.Agendarconsultap2Config',
+    #'agendamento.apps.AgendamentoConfig',
 ]
 
 MIDDLEWARE = [

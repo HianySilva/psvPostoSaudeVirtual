@@ -20,8 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls', namespace='pages')),
-    path('medicos/', include('medico.urls')),
-    path('agendarConsulta/', include('agendarConsulta.urls')),
-    path('agendarConsultaP2/', include('agendarConsultaP2.urls')),
-    path('agendamento/', include('agendamento.urls')),   
+    path('cadastros/', include('cadastros.urls')),
+    #path('medicos/', include('medico.urls')),
+    #path('agendarConsulta/', include('agendarConsulta.urls')),
+    #path('agendarConsultaP2/', include('agendarConsultaP2.urls')),
+    #path('agendamento/', include('agendamento.urls')),   
 ]

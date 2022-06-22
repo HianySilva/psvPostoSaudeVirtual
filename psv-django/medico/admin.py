@@ -1,21 +1,21 @@
-from django.contrib import admin
-from .models import Medico
+#from django.contrib import admin
+#from .models import Medico
 
 # Register your models here.
 
-class MedicoAdmin(admin.ModelAdmin):
-    list_display = [
-        'nome_Completo',
-        'crm',
-        'especializacao',
-        'turno',
-        'email',
-        'senha'
-    ]
+#class MedicoAdmin(admin.ModelAdmin):
+#    list_display = [
+#        'nome_Completo',
+#        'crm',
+#        'especializacao',
+#        'turno',
+#        'email',
+#        'senha'
+#    ]
 
-    search_fields = [
-        'nome_completo'
-    ]
+#    search_fields = [
+#        'nome_completo'
+#    ]
 
 
-admin.site.register(Medico, MedicoAdmin)
+#admin.site.register(Medico, MedicoAdmin)

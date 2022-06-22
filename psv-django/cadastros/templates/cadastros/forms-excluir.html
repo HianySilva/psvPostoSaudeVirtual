@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Excluir</title>{% endblock %}
+
+{% load static %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="{% static 'css/sair.css' %}">
+<form method="post">
+    {% csrf_token %}
+    <div class="atendente-login">
+        <header class="header-atendente">
+            <img class="atendente-img" src="{% static 'img/atendente.png' %}"/>
+            <span><strong id="atendente-voice">Você tem certeza que deseja Excluir "{{ object }}"?<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </header>
+    </div>
+    <button class="btn btn-danger" id="botao-sair" type="submit">Excluir</button>
+</form>
+{% endblock %}
+
+{% block rodape %} 
+{% endblock %} 
