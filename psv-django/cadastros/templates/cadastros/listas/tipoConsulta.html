@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}<title>Página de Consultas</title>{% endblock %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="{% static 'css/tipoConsulta.css' %}">
+<form action="" method="get" class="form-busca">
+  <img class="atendente-img" src="{% static 'img/atendente.png' %}">
+  <input type="text" name="tipo_Da_Consulta" placeholder="Buscar por tipo de consulta" id="busca">
+  <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+<div class="table-responsive">
+    <br>
+    <h1> <center><b>Consultas</b></center></h1>
+    <br>
+    <table class="table table-blue table-sm">
+        
+        <thead>
+            <tr>
+                <th><i>Tipo De Consulta</i></th>
+                <th><i>Turno</i></th>
+                <th><i>Dia Da Semana</i></th>
+                <th><i>Status</i></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for agendamento in object_list %}
+            <tr>
+                <td>{{ agendamento.tipo_Da_Consulta }}</td>
+                <td>{{ agendamento.turno }}</td>
+                <td>{{ agendamento.dia_Da_Semana }}</td>
+                <td>
+                    {% if agendamento.status %}
+                        Disponível
+                    {% else %}
+                        Não Disponível
+                    {% endif %}
+                </td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                          </svg>
+                    </button>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+            <span><strong id="atendente-voice">&nbsp; Posto de Saúde Virtual<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <b>Bem-vindo ao Posto de Saúde Virtual!</b> <br>
+            <i>Para realizar seu primeiro agendamento, clique em cadastrar. <br>
+          Caso não seja o primeiro agendamento, clique em agendar.</i>
+
+        </div>
+        <div class="modal-footer">
+          <a href="{% url 'cadastar-agendamento' %}"><button type="button" class="agendar">Agendar</button></a>
+          <a href="{% url 'cadastar-pessoa' %}"><button type="button" class="cadastrar">Cadastrar</button></a>
+        </div>
+      </div>
+    </div>
+  </div>   
+{% endblock %}
+
+{% block rodape %} 
+{% endblock %} 

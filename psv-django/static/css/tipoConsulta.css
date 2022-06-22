@@ -1,0 +1,75 @@
+.atendente-img {
+    height: 10vh;
+    border-radius: 100%;
+}
+#atendente-voice {
+    background-color: #051775;
+    color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+}
+#sound {
+    margin: 0.5em;
+}
+.form-busca {
+    margin-top: 1em;
+}
+#botao-pesquisa{
+    background-color: #051775;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+table {
+    background-color: #051775;
+}
+thead {
+    color:white;
+}
+tbody {
+    color: white;
+}
+h1 {
+    color: #051775;
+    font-size: 20pt;
+}
+.bi-pencil-square {
+    color: black;
+}
+.bi-trash3 {
+    color: black;
+
+}
+.fa-solid {
+    color:white;
+}
+.cadastrar {
+    background-color: #00BFFF;
+    color: white;
+    border-color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+}
+.agendar {
+    border-color:white;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #051775;
+    color: #ffffff;
+
+}
+.fa-square {
+    color: 	#00BFFF;
+    
+}
+.modal-dialog {
+    background-color: #00BFFF;
+}
+.modal-header {
+    background-color: #051775;
+}
+.modal-body {
+    background-color: #051775;
+    color: white;
+}
+.modal-footer {
+    background-color: #051775;
+}
