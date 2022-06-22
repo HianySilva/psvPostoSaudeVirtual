@@ -30,7 +30,7 @@
         <tbody>
             {% for minhaConsulta in object_list %}
             <tr>
-                <td>{{ minhaConsulta.pessoa.nome_Completo }}</td>
+                <td>{{ minhaConsulta.nome_De_Usuario.nome_Completo }}</td>
                 <td>{{ minhaConsulta.endereco.endereco }}</td>
                 <td>{{ minhaConsulta.consulta.tipo_Da_Consulta.tipo_Da_Consulta }}</td>
                 <td>{{ minhaConsulta.turno.turno }}</td>

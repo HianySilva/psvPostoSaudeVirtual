@@ -11,10 +11,10 @@
 .card {
   margin-left: 3.5em;
   width: 12rem;
-  border-radius: 100%;
+  border-radius: 20%;
 }
 .card-img {
-  border-radius: 100%;
+  border-radius: 20%;
 }
 .rodape {
   background-color: #051775;

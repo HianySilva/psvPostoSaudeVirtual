@@ -9,37 +9,37 @@ class PessoaCreateView(CreateView):
     model = Pessoa
     form_class = PessoaForm
     success_url = '/cadastros/cadastrar/endereco/'
-    template_name = 'cadastros/agendamento.html'
+    template_name = 'cadastros/cadastro.html'
 
 class EnderecoCreateView(CreateView):
     model = Endereco
     form_class = EnderecoForm
     def get_success_url(self):
         return reverse_lazy ('cadastar-agendamento')
-    template_name = 'cadastros/agendamento.html'
+    template_name = 'cadastros/cadastro.html'
 
 class AgendarConsultaCreateView(CreateView):
     model = AgendarConsulta
     form_class = AgendarConsultaForm
     success_url = '/cadastros/cadastrar/medico/'
-    template_name = 'cadastros/agendamento.html'
+    template_name = 'cadastros/cadastro.html'
 
 class MedicoCreateView(CreateView):
     model = Medico
     form_class = MedicoForm
     success_url = '/cadastros/cadastrar/descricao/'
-    template_name = 'cadastros/agendamento.html'
+    template_name = 'cadastros/cadastro.html'
 
 class ConsultaCreateView(CreateView):
     model = Consulta
     form_class = ConsultaForm
     success_url = '/cadastros/cadastrar/agendamento/'
-    template_name = 'cadastros/agendamento.html'
+    template_name = 'cadastros/cadastro.html'
 
 class AgendamentoCreateView(CreateView):
     model = Agendamento
     form_class = AgendamentoForm
-    success_url = '/'
+    success_url = '/cadastros/listar/agendamento/'
     template_name = 'cadastros/agendamento.html'
 
 ############### UPDATEVIEW ##################################

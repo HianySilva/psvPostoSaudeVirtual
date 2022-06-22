@@ -43,13 +43,13 @@ h1 {
 .fa-solid {
     color:white;
 }
-.cadastrar {
+#cadastrar {
     background-color: #00BFFF;
     color: white;
     border-color: #ffffff;
     border-radius: 50px 50px 50px 50px;
 }
-.agendar {
+#agendar {
     border-color:white;
     border-radius: 50px 50px 50px 50px;
     background-color: #051775;
@@ -73,3 +73,8 @@ h1 {
 .modal-footer {
     background-color: #051775;
 }
+.tabela{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+

@@ -13,8 +13,8 @@
 }
 .card {
   width: 8rem;
-  border-radius: 100%;
+  border-radius: 20%;
 }
 .card-img {
-  border-radius: 100%;
+  border-radius: 20%;
 }

@@ -53,7 +53,7 @@ class Consulta(models.Model):
         return "{}: {}".format(self.tipo_Da_Consulta.tipo_Da_Consulta, self.descricao)
 
 class Agendamento(models.Model):
-    pessoa = models.ForeignKey(Pessoa, on_delete=models.PROTECT)
+    nome_De_Usuario = models.ForeignKey(Pessoa, on_delete=models.PROTECT)
     endereco = models.ForeignKey(Endereco, on_delete=models.PROTECT)
     turno = models.ForeignKey(AgendarConsulta, on_delete=models.PROTECT)
     consulta = models.ForeignKey(Consulta, on_delete=models.PROTECT)

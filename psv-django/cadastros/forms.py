@@ -38,4 +38,4 @@ class ConsultaForm(forms.ModelForm):
 class AgendamentoForm(forms.ModelForm):
     class Meta:
         model = Agendamento
-        fields = ('pessoa', 'endereco', 'turno', 'consulta', 'medico')
+        fields = ('nome_De_Usuario', 'endereco', 'turno', 'consulta', 'medico')
