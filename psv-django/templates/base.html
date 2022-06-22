@@ -43,7 +43,7 @@
                 <li><a class="dropdown-item" href="#">Dra. Carolina Nascimento Magalhães Lyra de Assunção</a></li>
                 <li><a class="dropdown-item" href="#">Dr. Jorge Góes Dias da Cruz</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item activate" href="{% url 'medico.index' %}">Ver mais...</a></li> 
+                <li><a class="dropdown-item activate" href="#">Ver mais...</a></li> 
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -146,9 +146,9 @@
   
   <script>
   $(document).ready(function(){
-    $("#id_numero_Do_Cartao_Do_SUS").mask("000.000.000.000.000");
-    $("#id_cPF").mask("000.000.000-00");
-    $("#id_cEP").mask("00000-000");
+    $("#id_num_Do_Cartao_Do_Sus").mask("000.000.000.000.000");
+    $("#id_cpf").mask("000.000.000-00");
+    $("#id_cep").mask("00000-000");
     var SPMaskBehavior = function (val) {
       return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
     },
