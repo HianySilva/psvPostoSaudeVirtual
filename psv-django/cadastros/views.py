@@ -10,7 +10,7 @@ from braces.views import GroupRequiredMixin
 class PessoaCreateView(CreateView):
     model = Pessoa
     form_class = PessoaForm
-    success_url = '/cadastros/cadastrar/endereco/'
+    success_url = 'atualizar-dados2'
     template_name = 'cadastros/cadastro.html'
 
 class EnderecoCreateView(CreateView):
