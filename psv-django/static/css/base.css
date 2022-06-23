@@ -2,6 +2,7 @@
     width: 23vw;
     color: #051775;
     font-size: 15pt;
+    margin-left: 2%;
 }
 .logo {
     width: 5vw;
@@ -49,4 +50,26 @@ strong {
 }
 #twitter {
     margin-right: 15%;
+}
+.rodape{
+    padding: 20px 20px;
+    margin-top: 2%;
+}
+.inst{
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    color: #FF1493;
+}
+.twt{
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    color: 	#00008B;
+}
+.face{
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    color: 	#1E90FF;
 }
