@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'pages.apps.PagesConfig',
     'cadastros.apps.CadastrosConfig',
-    'usuarios.apps.UsuariosConfig',
     #'medico.apps.MedicoConfig',
     #'agendarConsulta.apps.AgendarconsultaConfig',
     #'agendarConsultaP2.apps.Agendarconsultap2Config',
@@ -147,7 +146,6 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-LOGIN_URL = 'login'
 ACCOUNT_SESSION_REMEMBER = True
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True

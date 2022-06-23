@@ -21,7 +21,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls', namespace='pages')),
     path('cadastros/', include('cadastros.urls')),
-    path('usuarios/', include('usuarios.urls')),
     #path('medicos/', include('medico.urls')),
     #path('agendarConsulta/', include('agendarConsulta.urls')),
     #path('agendarConsultaP2/', include('agendarConsultaP2.urls')),

@@ -70,18 +70,6 @@
                 <li><a class="dropdown-item" href="#">Ver mais...</a></li>
               </ul>
             </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Cadastros
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{% url 'cadastar-medico' %}">Médicos</a></li>
-                <li><a class="dropdown-item" href="{% url 'cadastar-tipo-consulta' %}">Tipo de Consultas</a></li>
-                <li><a class="dropdown-item" href="{% url 'cadastar-consulta-descricao' %}">Descrição das Consultas</a></li>
-              </ul>
-            </li>
-            {% endif %}
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" aria-label="Search">
@@ -93,16 +81,16 @@
               <a class="nav-link disabled" href="#" id="first-menu">Bem-vindo(a), {{ user.get_username }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'logout' %}" id="first-menu">Sair</a>
+              <a class="nav-link" href="{% url 'account_logout' %}" id="first-menu">Sair</a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% url 'login' %}" id="first-menu"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+              <a class="nav-link" aria-current="page" href="{% url 'account_login' %}" id="first-menu"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
             </li>
           </ul>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'registrar' %}" id="first-menu"><i class="fa-solid fa-circle-user"></i></i>Cadastrar</a>
+              <a class="nav-link" href="{% url 'account_signup' %}" id="first-menu"><i class="fa-solid fa-circle-user"></i></i>Cadastrar</a>
             </li>
             {% endif %}
           </ul>    
