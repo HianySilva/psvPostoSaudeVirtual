@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn postosaudevirtual.wsgi --log-file -
+web: gunicorn postosaudevirtual.wsgi
