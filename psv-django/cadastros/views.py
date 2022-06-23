@@ -1,7 +1,9 @@
+import imp
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from .models import Pessoa, Endereco, AgendarConsulta, Medico, Consulta, Agendamento
 from .forms import PessoaForm, EnderecoForm, AgendarConsultaForm, MedicoForm, ConsultaForm, AgendamentoForm
+from braces.views import GroupRequiredMixin
 
 ############### CREATEVIEW ##################################
 
@@ -18,19 +20,22 @@ class EnderecoCreateView(CreateView):
         return reverse_lazy ('cadastar-agendamento')
     template_name = 'cadastros/cadastro.html'
 
-class AgendarConsultaCreateView(CreateView):
+class AgendarConsultaCreateView(GroupRequiredMixin, CreateView):
+    group_required = u"Administrador"
     model = AgendarConsulta
     form_class = AgendarConsultaForm
     success_url = '/cadastros/cadastrar/medico/'
     template_name = 'cadastros/cadastro.html'
 
-class MedicoCreateView(CreateView):
+class MedicoCreateView(GroupRequiredMixin, CreateView):
+    group_required = u"Administrador"
     model = Medico
     form_class = MedicoForm
     success_url = '/cadastros/cadastrar/descricao/'
     template_name = 'cadastros/cadastro.html'
 
-class ConsultaCreateView(CreateView):
+class ConsultaCreateView(GroupRequiredMixin, CreateView):
+    group_required = u"Administrador"
     model = Consulta
     form_class = ConsultaForm
     success_url = '/cadastros/cadastrar/agendamento/'
@@ -56,19 +61,22 @@ class EnderecoUpdateView(UpdateView):
     success_url = '/'
     template_name = 'cadastros/agendamento.html'
 
-class AgendarConsultaUpdateView(UpdateView):
+class AgendarConsultaUpdateView(GroupRequiredMixin, UpdateView):
+    group_required = u"Administrador"
     model = AgendarConsulta
     form_class = AgendarConsultaForm
     success_url = '/'
     template_name = 'cadastros/agendamento.html'
 
-class MedicoUpdateView(UpdateView):
+class MedicoUpdateView(GroupRequiredMixin, UpdateView):
+    group_required = u"Administrador"
     model = Medico
     form_class = MedicoForm
     success_url = '/'
     template_name = 'cadastros/agendamento.html'
 
-class ConsultaUpdateView(UpdateView):
+class ConsultaUpdateView(GroupRequiredMixin, UpdateView):
+    group_required = u"Administrador"
     model = Consulta
     form_class = ConsultaForm
     success_url = '/'
@@ -92,17 +100,20 @@ class EnderecoDeleteView(DeleteView):
     success_url = '/'
     template_name = 'cadastros/forms-excluir.html'
 
-class AgendarConsultaDeleteView(DeleteView):
+class AgendarConsultaDeleteView(GroupRequiredMixin, DeleteView):
+    group_required = u"Administrador"
     model = AgendarConsulta
     success_url = '/'
     template_name = 'cadastros/forms-excluir.html'
 
-class MedicoDeleteView(DeleteView):
+class MedicoDeleteView(GroupRequiredMixin, DeleteView):
+    group_required = u"Administrador"
     model = Medico
     success_url = '/'
     template_name = 'cadastros/forms-excluir.html'
 
-class ConsultaDeleteView(DeleteView):
+class ConsultaDeleteView(GroupRequiredMixin, DeleteView):
+    group_required = u"Administrador"
     model = Consulta
     success_url = '/'
     template_name = 'cadastros/forms-excluir.html'

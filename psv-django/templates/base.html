@@ -25,7 +25,7 @@
   <div class="menu">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <img src="{% static 'img/my-logo.png' %}" height="40" >
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,6 +70,18 @@
                 <li><a class="dropdown-item" href="#">Ver mais...</a></li>
               </ul>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cadastros
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'cadastar-medico' %}">Médicos</a></li>
+                <li><a class="dropdown-item" href="{% url 'cadastar-tipo-consulta' %}">Tipo de Consultas</a></li>
+                <li><a class="dropdown-item" href="{% url 'cadastar-consulta-descricao' %}">Descrição das Consultas</a></li>
+              </ul>
+            </li>
+            {% endif %}
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" aria-label="Search">
@@ -85,12 +97,12 @@
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% url 'account_login' %}" id="first-menu">Login</a>
+              <a class="nav-link" aria-current="page" href="{% url 'account_login' %}" id="first-menu"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
             </li>
           </ul>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}" id="first-menu">Cadastrar</a>
+              <a class="nav-link" href="{% url 'account_signup' %}" id="first-menu"><i class="fa-solid fa-circle-user"></i></i>Cadastrar</a>
             </li>
             {% endif %}
           </ul>    
@@ -148,6 +160,7 @@
   $(document).ready(function(){
     $("#id_num_Do_Cartao_Do_Sus").mask("000.000.000.000.000");
     $("#id_cpf").mask("000.000.000-00");
+    $("#id_num_Da_Residencia").mask("00");
     $("#id_cep").mask("00000-000");
     var SPMaskBehavior = function (val) {
       return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
