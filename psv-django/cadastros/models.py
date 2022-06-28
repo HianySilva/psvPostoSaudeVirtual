@@ -71,7 +71,7 @@ class Agendamento(models.Model):
         (QUINTA, 'Quinta'),
         (SEXTA, 'Sexta'),
     )
-    dia_da_semana = models.CharField(
+    dia_Da_Semana = models.CharField(
         max_length=2,
         choices=DIA_DA_SEMANA_CHOICES,
         default=SEGUNDA,
@@ -80,6 +80,7 @@ class Agendamento(models.Model):
     , )
 
     turno = models.ForeignKey(AgendarConsulta, on_delete=models.PROTECT)
+    data_De_Agendamento = models.DateField(blank=True, null=True, verbose_name='Data De Agendamento')
 
     def __str__(self):
         return self.pessoa.nome_Completo

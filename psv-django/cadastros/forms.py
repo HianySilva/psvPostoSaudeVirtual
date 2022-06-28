@@ -36,6 +36,11 @@ class ConsultaForm(forms.ModelForm):
         fields = ('descricao', 'tipo_Da_Consulta', 'medico')
 
 class AgendamentoForm(forms.ModelForm):
+    data_De_Agendamento = forms.DateField(
+        widget=forms.TextInput(
+            attrs={"type": "date"}
+        ) 
+    )
     class Meta:
         model = Agendamento
-        fields = ('nome_De_Usuario', 'endereco','consulta', 'medico','dia_da_semana', 'turno')
+        fields = ('nome_De_Usuario', 'endereco','consulta', 'medico','dia_Da_Semana', 'turno', 'data_De_Agendamento')
