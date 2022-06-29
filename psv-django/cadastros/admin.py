@@ -8,6 +8,9 @@ class PessoaAdmin(admin.ModelAdmin):
         'data_De_Nascimento',
         'num_Do_Cartao_Do_Sus'
     ]
+    def save_model(self, request, obj, form, change):
+        obj.username = request.user.username
+        obj.save()
     
 class EnderecoAdmin(admin.ModelAdmin):
     list_display = [

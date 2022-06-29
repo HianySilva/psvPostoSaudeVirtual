@@ -29,8 +29,9 @@
         </thead>
         <tbody>
             {% for minhaConsulta in object_list %}
+            {% if minhaConsulta.nome_De_Usuario.username == user.get_username %} 
             <tr>
-                <td>{{ minhaConsulta.nome_De_Usuario.nome_Completo }}</td>
+                <td>{{ minhaConsulta.nome_De_Usuario.nome_ }}</td>
                 <td>{{ minhaConsulta.endereco.endereco }}</td>
                 <td>{{ minhaConsulta.consulta.tipo_Da_Consulta.tipo_Da_Consulta }}</td>
                 <td>{{ minhaConsulta.turno.turno }}</td>
@@ -42,6 +43,7 @@
                       </svg></a>
                 </td>
             </tr>
+            {% endif %}
             {% endfor %}
         </tbody>
     </table>

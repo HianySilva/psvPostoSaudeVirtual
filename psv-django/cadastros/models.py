@@ -3,6 +3,7 @@ from django.db import models
 
 class Pessoa(models.Model):
     nome_Completo = models.CharField(max_length=256)
+    username = models.CharField(max_length=128, null=True,)
     cpf = models.CharField(verbose_name='CPF', max_length=14, unique=True)
     data_De_Nascimento = models.DateField()
     num_Do_Cartao_Do_Sus = models.CharField(verbose_name='Número Do Cartão do SUS' ,max_length=19, unique=True)

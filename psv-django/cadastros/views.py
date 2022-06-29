@@ -13,6 +13,12 @@ class PessoaCreateView(CreateView):
     success_url = '/cadastros/cadastrar/endereco/'
     template_name = 'cadastros/cadastro.html'
 
+    def form_valid(self, form):
+
+        form.instance.username = self.request.user.username
+        form.save()
+        return super(PessoaCreateView, self).form_valid(form)
+
 class EnderecoCreateView(CreateView):
     model = Endereco
     form_class = EnderecoForm
@@ -54,6 +60,12 @@ class PessoaUpdateView(UpdateView):
     form_class = PessoaForm
     success_url = '/'
     template_name = 'cadastros/agendamento.html'
+
+    def form_valid(self, form):
+
+        form.instance.username = self.request.user.username
+        form.save()
+        return super(PessoaCreateView, self).form_valid(form)
 
 class EnderecoUpdateView(UpdateView):
     model = Endereco
