@@ -54,11 +54,34 @@ class Consulta(models.Model):
         return "{}: {}".format(self.tipo_Da_Consulta.tipo_Da_Consulta, self.descricao)
 
 class Agendamento(models.Model):
+    SEGUNDA = 'SD'
+    TERCA = 'TC'
+    QUARTA = 'QR'
+    QUINTA = 'QI'
+    SEXTA = 'ST'
+
+
     nome_De_Usuario = models.ForeignKey(Pessoa, on_delete=models.PROTECT)
     endereco = models.ForeignKey(Endereco, on_delete=models.PROTECT)
-    turno = models.ForeignKey(AgendarConsulta, on_delete=models.PROTECT)
     consulta = models.ForeignKey(Consulta, on_delete=models.PROTECT)
     medico = models.ForeignKey(Medico, on_delete=models.PROTECT)
+    DIA_DA_SEMANA_CHOICES = (
+        (SEGUNDA, 'Segunda'),
+        (TERCA, 'Terça'),
+        (QUARTA, 'Quarta'),
+        (QUINTA, 'Quinta'),
+        (SEXTA, 'Sexta'),
+    )
+    dia_Da_Semana = models.CharField(
+        max_length=2,
+        choices=DIA_DA_SEMANA_CHOICES,
+        default=SEGUNDA,
+        blank=True,
+        null=True
+    , )
+
+    turno = models.ForeignKey(AgendarConsulta, on_delete=models.PROTECT)
+    data_De_Agendamento = models.DateField(blank=True, null=True, verbose_name='Data De Agendamento')
 
     def __str__(self):
         return self.pessoa.nome_Completo
