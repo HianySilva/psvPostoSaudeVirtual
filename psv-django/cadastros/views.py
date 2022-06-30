@@ -58,7 +58,7 @@ class AgendamentoCreateView(CreateView):
 class PessoaUpdateView(UpdateView):
     model = Pessoa
     form_class = PessoaForm
-    success_url = '/'
+    success_url = '/cadastros/listar/agendamento/'
     template_name = 'cadastros/agendamento.html'
 
     def form_valid(self, form):
@@ -66,7 +66,6 @@ class PessoaUpdateView(UpdateView):
         form.instance.username = self.request.user.username
         form.save()
         return super(PessoaCreateView, self).form_valid(form)
-
 class EnderecoUpdateView(UpdateView):
     model = Endereco
     form_class = EnderecoForm
@@ -97,7 +96,7 @@ class ConsultaUpdateView(GroupRequiredMixin, UpdateView):
 class AgendamentoUpdateView(UpdateView):
     model = Agendamento
     form_class = AgendamentoForm
-    success_url = '/'
+    success_url = '/cadastros/listar/agendamento/'
     template_name = 'cadastros/agendamento.html'
 
 ############### DELETEVIEW ##################################
@@ -127,7 +126,7 @@ class MedicoDeleteView(GroupRequiredMixin, DeleteView):
 class ConsultaDeleteView(GroupRequiredMixin, DeleteView):
     group_required = u"Administrador"
     model = Consulta
-    success_url = '/'
+    success_url = '/cadastros/listar/agendamento/'
     template_name = 'cadastros/forms-excluir.html'
 
 class AgendamentoDeleteView(DeleteView):

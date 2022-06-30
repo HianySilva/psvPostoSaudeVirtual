@@ -38,7 +38,7 @@ class Medico(models.Model):
     crm = models.CharField(verbose_name='CRM', max_length=256, unique=True)
     especializacao = models.CharField(verbose_name='Especialização', max_length=256)
     turno = models.CharField(max_length=5)
-    dia_Da_Semana = models.CharField(max_length=13, unique=True)
+    dia_Da_Semana = models.CharField(max_length=13)
     email = models.EmailField(max_length=256, unique=True)
     senha = models.CharField(max_length=256)
 
