@@ -26,5 +26,5 @@ urlpatterns = [
 
     path('listar/tipoConsulta/', login_required(AgendarConsultarListView.as_view()), name='listar-tipo-consulta'),
     path('listar/agendamento/', login_required(AgendamentoListView.as_view()), name='listar-agendamento'),
-    path('listar/medico/', login_required(MedicoListView.as_view()), name='listar-medico'),
+    path('listar/medico/', MedicoListView.as_view(), name='listar-medico'),
 ]
