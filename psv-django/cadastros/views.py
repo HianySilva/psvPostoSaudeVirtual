@@ -144,3 +144,7 @@ class AgendarConsultarListView(ListView):
 class AgendamentoListView(ListView):
     model = Agendamento
     template_name = 'cadastros/listas/agendamentoList.html'
+
+class MedicoListView(ListView):
+    model = Medico
+    template_name = 'cadastros/listas/medicoList.html'

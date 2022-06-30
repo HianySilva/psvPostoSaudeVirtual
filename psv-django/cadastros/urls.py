@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PessoaCreateView, EnderecoCreateView, AgendarConsultaCreateView, MedicoCreateView, ConsultaCreateView, AgendamentoCreateView, PessoaUpdateView, EnderecoUpdateView, AgendarConsultaUpdateView, MedicoUpdateView, ConsultaUpdateView, AgendamentoUpdateView, PessoaDeleteView, EnderecoDeleteView, AgendarConsultaDeleteView, MedicoDeleteView, ConsultaDeleteView, AgendamentoDeleteView, AgendarConsultarListView ,AgendamentoListView
+from .views import PessoaCreateView, EnderecoCreateView, AgendarConsultaCreateView, MedicoCreateView, ConsultaCreateView, AgendamentoCreateView, PessoaUpdateView, EnderecoUpdateView, AgendarConsultaUpdateView, MedicoUpdateView, ConsultaUpdateView, AgendamentoUpdateView, PessoaDeleteView, EnderecoDeleteView, AgendarConsultaDeleteView, MedicoDeleteView, ConsultaDeleteView, AgendamentoDeleteView, AgendarConsultarListView ,AgendamentoListView, MedicoListView
 from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
@@ -26,4 +26,5 @@ urlpatterns = [
 
     path('listar/tipoConsulta/', login_required(AgendarConsultarListView.as_view()), name='listar-tipo-consulta'),
     path('listar/agendamento/', login_required(AgendamentoListView.as_view()), name='listar-agendamento'),
+    path('listar/medico/', login_required(MedicoListView.as_view()), name='listar-medico'),
 ]

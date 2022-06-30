@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}<title>Página de Consultas</title>{% endblock %}
+
+{% block conteudo %}
+
+<link rel="stylesheet" href="{% static 'css/tipoConsulta.css' %}">
+<div class="tabela">
+<form action="" method="get" class="form-busca">
+  <img class="atendente-img" src="{% static 'img/atendente.png' %}">
+  <input type="text" name="tipo_Da_Consulta" placeholder="Buscar por tipo de consulta" id="busca">
+  <button id="botao-pesquisa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+<div class="table-responsive">
+    <br>
+    <h1> <center><b>Médicos</b></center></h1>
+    <br>
+    <table class="table table-blue table-sm">
+        
+        <thead>
+            <tr>
+                <th><i>Nome</i></th>
+                <th><i>Especialização</i></th>
+                <th><i>CRM</i></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for medico in object_list %}
+            <tr>
+                <td>{{ medico.nome_Completo }}</td>
+                <td>{{ medico.especializacao }}</td>
+                <td>{{ medico.crm }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+            <span><strong id="atendente-voice">&nbsp; Posto de Saúde Virtual<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <b>Bem-vindo ao Posto de Saúde Virtual!</b> <br>
+            <i>Para realizar seu primeiro agendamento, clique em cadastrar. <br>
+          Caso não seja o primeiro agendamento, clique em agendar.</i>
+
+        </div>
+        <div class="modal-footer">
+          <a href="{% url 'cadastar-agendamento' %}"><button class="btn btn-success" type="button" id="agendar">Agendar</button></a>
+          <a href="{% url 'cadastar-pessoa' %}"><button type="button" class="btn btn-success" id ="cadastrar">Cadastrar</button></a>
+        </div>
+      </div>
+    </div>
+  </div>   
+{% endblock %}
+
+{% block rodape %} 
+{% endblock %} 
